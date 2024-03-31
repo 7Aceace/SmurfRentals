@@ -1,0 +1,19 @@
+.wrapper{
+  height: 100vh;
+  background: white;
+  width: 100;
+}
+
+.login{
+  width: 300xpx;
+  padding: 20px;
+  height: min-content;
+  border-radius: 5px;
+  color:rgb(23, 23, 23);
+  background: rgba( 61, 121, 235, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
