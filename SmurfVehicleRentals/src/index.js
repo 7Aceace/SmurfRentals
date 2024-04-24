@@ -7,9 +7,9 @@ import './components/hero'
 import Navbar from './components/Navbar/Navbar';
 import reportWebVitals from './reportWebVitals';
 import Cards from './cards';
-import Footer from './components/Navbar/Footer';
 import AppHero from './components/hero'
 import LoginCard from './components/LoginCard'
+import FooterN from './components/FooterN'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,7 +24,7 @@ root.render(
     <div className='cardcontainer'> 
       <Cards/>
     </div>
-    <Footer/>
+    <FooterN/>
   </React.StrictMode>
 );
 
