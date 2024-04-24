@@ -20,7 +20,7 @@ const Navbar = () => {
       <img src={searchw} alt='' className='logosrchw'></img>
       
     </div>
-  </div>
+    </div>
     );
 };
 

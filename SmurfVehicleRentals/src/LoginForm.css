@@ -9,8 +9,8 @@
   padding: 20px;
   height: min-content;
   border-radius: 5px;
-  color:rgb(23, 23, 23);
-  background: rgba( 61, 121, 235, 0.25 );
+  color:rgb(255, 255, 255);
+  background: rgba(5, 5, 5, 0.884);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );

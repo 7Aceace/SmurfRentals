@@ -1,11 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import LoginForm from './LoginForm';
+import './components/hero'
+
+
 import Navbar from './components/Navbar/Navbar';
 import reportWebVitals from './reportWebVitals';
 import Cards from './cards';
 import Footer from './components/Navbar/Footer';
+import AppHero from './components/hero'
+import LoginCard from './components/LoginCard'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,8 +17,11 @@ root.render(
     <div className='container'>
       <Navbar/>
     </div>
-    <LoginForm />
-    <div>
+    <main>
+      <AppHero/>
+    </main>
+    <LoginCard />
+    <div className='cardcontainer'> 
       <Cards/>
     </div>
     <Footer/>

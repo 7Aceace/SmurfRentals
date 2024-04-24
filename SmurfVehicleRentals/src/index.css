@@ -1,12 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *{
   margin: 0;
-  padding: 0;
+  padding: 100;
   box-sizing: border-box;
   font-family: sans-serif;
 }
 
-.container{
-  background: #ebf2fa;
-  padding: 15px 7%;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+.cardcontainer{
+
+  width: 100%;
+  padding: 2;
+
 }
