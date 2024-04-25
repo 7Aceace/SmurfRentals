@@ -2,29 +2,31 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import './components/hero'
-
-
-import Navbar from './components/Navbar/Navbar';
 import reportWebVitals from './reportWebVitals';
-import Cards from './cards';
-import AppHero from './components/hero'
-import LoginCard from './components/LoginCard'
-import FooterN from './components/FooterN'
+import App from './App';
+import AppVehicleRentals from './AppVehicleRentals'
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App/>,
+  },
+
+  {
+    path: "Vehicles",
+    element: <AppVehicleRentals/>,
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <div className='container'>
-      <Navbar/>
-    </div>
-    <main>
-      <AppHero/>
-    </main>
-    <LoginCard />
-    <div className='cardcontainer'> 
-      <Cards/>
-    </div>
-    <FooterN/>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
