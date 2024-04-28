@@ -1,26 +1,22 @@
 import React from 'react';
-import Navbar from './components/Navbar/Navbar';
-import './index.css';
-import {Navigate} from "react-router-dom";
-import UserRoutes from './routes/UserRoutes';
-import  NonUserRoutes from './routes/NonUserRoutes'
+import Navbar from '../components/Navbar/Navbar';
+import '../index.css';
 
-import { CarouselItem, CarouselContent, CarouselPrevious, CarouselNext, Carousel } from "./components/ui/carousel"
-import { Input } from "./components/ui/input"
-import { Button } from "./components/ui/button"
-import { Checkbox } from "./components/ui/checkbox"
-import { Label } from "./components/ui/label"
-import { UserAuth } from './context/AuthContext';
+
+import { CarouselItem, CarouselContent, CarouselPrevious, CarouselNext, Carousel } from "../components/ui/carousel"
+import { Input } from "../components/ui/input"
+import { Button } from "../components/ui/button"
+import { Checkbox } from "../components/ui/checkbox"
+import { Label } from "../components/ui/label"
+import { UserAuth } from '../context/AuthContext';
+
 
 const AppVehicleRentals = () => {
-const{ isLoggedOut } = UserAuth();
+
  return (
 
         <div>
-         {isLoggedOut ? <UserRoutes /> : <Navigate to={<NonUserRoutes />} />}
-            <div className='container'>
-                <Navbar/>
-            </div>
+            
 
       <div className="w-full">
         <Carousel className="w-full max-w-[1400px] mx-auto">
