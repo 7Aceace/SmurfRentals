@@ -3,10 +3,14 @@ import './Navbar.css'
 import logoword from '../../assets/Logocomplete.png'
 import searchw from '../../assets/searchw.png'
 import { Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import { UserAuth } from '../../context/AuthContext';
 
 import { Nav } from 'react-bootstrap';
 
 const Navbar = ({children}) => {
+  const {user} = UserAuth();
+
  return (
 
     <div className='navbar'>
@@ -29,7 +33,12 @@ const Navbar = ({children}) => {
           <div>
           <ul>
             <li> <Link to ='/Login'> Login</Link></li>
+            <li><Link to ='/User'>User</Link></li>
+            {user?.role === "admin" && <li>
+                <Link to={'/admin-dashboard'}>Admin Dashboard</Link>
+            </li>}
           </ul>
+         
           </div>
     
    

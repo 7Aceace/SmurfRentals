@@ -4,7 +4,9 @@ import { CardTitle, CardDescription, CardHeader, CardContent, Card } from "../..
 import { Label } from "../../components/ui/label"
 import { Input } from "../../components/ui/input"
 import { Button } from "../../components/ui/button"
-import { signUp } from '../../functions/auth'
+import { signIn, signUp } from '../../functions/auth'
+
+import { useNavigate } from 'react-router-dom'
 
 export function LoginSignUp() {
   const [firstName, setFirstName] = useState('')
@@ -13,11 +15,15 @@ export function LoginSignUp() {
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
 
+  const navigate = useNavigate();
+
   const userData = {
     firstName,
     lastName,
     email,
+    role: "user",
   };
+
 
 
   const handleCreateUser = () => {
@@ -38,6 +44,13 @@ export function LoginSignUp() {
     
   };
 
+  const handleLogin = () =>{
+    signIn(email,password);
+    if(userData.role === "admin")
+    {
+      navigate('/admin-dashboard');
+    }
+  }
  
 
   return (
@@ -66,14 +79,21 @@ export function LoginSignUp() {
               <CardContent className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" placeholder="name@example.com" type="email" />
+                  <Input id="email" placeholder="name@example.com" type="email"  
+                    onChange = {(e) =>{
+                    setEmail(e.target.value);
+                    }} />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="password">Password</Label>
-                  <Input id="password" placeholder="********" type="password" />
+                  <Input id="password" placeholder="********" type="password"  
+                    onChange = {(e) =>{
+                      setPassword(e.target.value);
+                    }} />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <Button className="w-full" type="submit">
+                  <Button className="w-full" type="submit" 
+                  onClick = {handleLogin}>
                     Sign In
                   </Button>
                   <Button className="w-full" variant="outline">
@@ -105,7 +125,7 @@ export function LoginSignUp() {
                     <Label htmlFor="last-name">Last Name</Label>
                     <Input type="text" id="last-name" placeholder="Doe"  
                     onChange = {(e) =>{
-                      setFirstName(e.target.value);
+                      setLastName(e.target.value);
                     }} />
                   </div>
                 </div>

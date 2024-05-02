@@ -19,6 +19,7 @@ export default function NonUserRoutes() {
         <Route path='/' element = {<Home/>}/>
         <Route path='/login' element = {<Login/>}/>
         <Route path='/*' element = {<Home/>}/>
+        
     </Routes>
     
 
