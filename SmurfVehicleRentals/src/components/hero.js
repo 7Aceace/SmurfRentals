@@ -1,6 +1,6 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
-import '../components/hero.js'
+import '../components/hero.css'
 
 
 var heroData =[
@@ -32,25 +32,21 @@ function hero() {
   return (
     <section id="home" className='hero-block'> 
     <Carousel>
-        {
-            heroData.map( hero => {
-            return(
-            
-            <Carousel.Item ker={hero.id}>
-                <img className='d -block w-100' src ={hero.image} alt={"Slide " +hero.id}/>
-                <Carousel.Caption>
-                  <h3>{hero.title}P</h3>
-                  <p>{hero.description}</p>
-                  <a className='btn btn-primary' href={hero.link}>Learn More</a>
-                </Carousel.Caption>
-            </Carousel.Item>)
-
-            })
-        }
-      
-      
+      {heroData.map(hero => {
+        return (
+          <Carousel.Item key={hero.id}>
+            <img className='d-block w-100' src={hero.image} alt={"Slide " + hero.id}/>
+            <Carousel.Caption>
+              <h3>{hero.title}</h3>
+              <p>{hero.description}</p>
+             
+              <a className='btn btn-secondary btn-rent btn-rent-blue' href={hero.rentLink}>Rent Now</a>
+            </Carousel.Caption>
+          </Carousel.Item>
+        );
+      })}
     </Carousel>
-    </section>
+  </section>
   )
 }
 

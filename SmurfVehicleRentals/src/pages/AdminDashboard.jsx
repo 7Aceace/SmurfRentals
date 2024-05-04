@@ -1,8 +1,13 @@
 import React from 'react';
+import { AdminDashboard } from '../components/component/AdminDashboard';
+import ProductManagement from '../components/component/ProductManagement';
 
 const MyComponent = () => {
  return (
-    <div> ADMIN DASHBOARD </div>
+    <div> ADMIN DASHBOARD 
+        <ProductManagement/>
+    </div>
+    
     );
 };
 

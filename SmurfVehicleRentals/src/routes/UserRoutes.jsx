@@ -23,7 +23,7 @@ export default function UserRoutes() {
     <Route path='/login' element = {<Login/>}/>
     <Route path='/*' element = {<Home/>}/>
     <Route path='/User' element={<UserDashboard/>}/>
-    <Route path='admin-dashboard' elemen0={<AdminDashboard/>}/>
+    <Route path='admin-dashboard' element={<AdminDashboard/>}/>
     </Routes>
     </>
   )

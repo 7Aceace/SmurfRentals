@@ -1,5 +1,5 @@
 import * as React from "react"
-import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons"
+import { ArrowLeftIcon, ArrowRightIcon } from "../component/@radix-ui/react-icons"
 import useEmblaCarousel from "embla-carousel-react";
 
 import { cn } from "../../lib/utils"
