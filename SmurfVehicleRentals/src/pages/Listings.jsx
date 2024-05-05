@@ -1,18 +1,43 @@
-import React from 'react';
-
+import React, { useState, useEffect } from 'react';
 import '../index.css';
-
 
 import { CarouselItem, CarouselContent, CarouselPrevious, CarouselNext, Carousel } from "../components/ui/carousel"
 import { Input } from "../components/ui/input"
 import { Button } from "../components/ui/button"
 import { Checkbox } from "../components/ui/checkbox"
 import { Label } from "../components/ui/label"
-import { UserAuth } from '../context/AuthContext';
+
+
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../firebase/fire';
+
+
+
+
 
 
 const AppVehicleRentals = () => {
 
+  
+//stateofvehicles
+const [vehicles, setVehicles] = useState([]);
+
+
+//retrievalofvehicles
+const getVehicles = async () => {
+  const Vehicles = await getDocs(collection(db, 'Vehicles'));
+  const vehiclesArray = [];
+  Vehicles.forEach((doc) => {
+    var data = doc.data();
+    data.ID = doc.id;
+    vehiclesArray.push(data);
+  });
+  setVehicles(vehiclesArray);
+}
+
+useEffect(() => {
+  getVehicles();
+}, []);
  return (
 
         <div>
@@ -186,6 +211,7 @@ const AppVehicleRentals = () => {
             </Button>
           </div>
         </div>
+        {vehicles.length > 0 && (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="bg-white dark:bg-gray-950 rounded-lg shadow-lg overflow-hidden">
             <img
@@ -215,157 +241,13 @@ const AppVehicleRentals = () => {
               </div>
             </div>
           </div>
-          <div className="bg-white dark:bg-gray-950 rounded-lg shadow-lg overflow-hidden">
-            <img
-              alt="Car Product"
-              className="w-full h-48 object-cover"
-              height={300}
-              src="/placeholder.svg"
-              style={{
-                aspectRatio: "400/300",
-                objectFit: "cover",
-              }}
-              width={400}
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-semibold mb-2">2022 Acme SUV</h3>
-              <p className="text-gray-500 dark:text-gray-400 mb-4">
-                Conquer the road in this spacious and capable SUV.
-              </p>
-              <div className="flex justify-between items-center">
-                <span className="text-lg font-semibold">$35,000</span>
-                <Button
-                  style={{
-                    backgroundColor: "#004AAD",
-                  }}
-                  variant="primary"
-                >
-                  Buy Now
-                </Button>
-              </div>
-            </div>
-          </div>
-          <div className="bg-white dark:bg-gray-950 rounded-lg shadow-lg overflow-hidden">
-            <img
-              alt="Car Product"
-              className="w-full h-48 object-cover"
-              height={300}
-              src="/placeholder.svg"
-              style={{
-                aspectRatio: "400/300",
-                objectFit: "cover",
-              }}
-              width={400}
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-semibold mb-2">2021 Acme Truck</h3>
-              <p className="text-gray-500 dark:text-gray-400 mb-4">
-                Haul your gear in style with this rugged and dependable truck.
-              </p>
-              <div className="flex justify-between items-center">
-                <span className="text-lg font-semibold">$45,000</span>
-                <Button
-                  style={{
-                    backgroundColor: "#004AAD",
-                  }}
-                  variant="primary"
-                >
-                  Buy Now
-                </Button>
-              </div>
-            </div>
-          </div>
-          <div className="bg-white dark:bg-gray-950 rounded-lg shadow-lg overflow-hidden">
-            <img
-              alt="Car Product"
-              className="w-full h-48 object-cover"
-              height={300}
-              src="/placeholder.svg"
-              style={{
-                aspectRatio: "400/300",
-                objectFit: "cover",
-              }}
-              width={400}
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-semibold mb-2">2020 Acme Sports Car</h3>
-              <p className="text-gray-500 dark:text-gray-400 mb-4">
-                Experience the thrill of the open road in this high-performance sports car.
-              </p>
-              <div className="flex justify-between items-center">
-                <span className="text-lg font-semibold">$65,000</span>
-                <Button
-                  style={{
-                    backgroundColor: "#004AAD",
-                  }}
-                  variant="primary"
-                >
-                  Buy Now
-                </Button>
-              </div>
-            </div>
-          </div>
-          <div className="bg-white dark:bg-gray-950 rounded-lg shadow-lg overflow-hidden">
-            <img
-              alt="Car Product"
-              className="w-full h-48 object-cover"
-              height={300}
-              src="/placeholder.svg"
-              style={{
-                aspectRatio: "400/300",
-                objectFit: "cover",
-              }}
-              width={400}
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-semibold mb-2">2019 Acme Sedan</h3>
-              <p className="text-gray-500 dark:text-gray-400 mb-4">
-                Enjoy the comfort and style of this classic sedan.
-              </p>
-              <div className="flex justify-between items-center">
-                <span className="text-lg font-semibold">$20,000</span>
-                <Button
-                  style={{
-                    backgroundColor: "#004AAD",
-                  }}
-                  variant="primary"
-                >
-                  Buy Now
-                </Button>
-              </div>
-            </div>
-          </div>
-          <div className="bg-white dark:bg-gray-950 rounded-lg shadow-lg overflow-hidden">
-            <img
-              alt="Car Product"
-              className="w-full h-48 object-cover"
-              height={300}
-              src="/placeholder.svg"
-              style={{
-                aspectRatio: "400/300",
-                objectFit: "cover",
-              }}
-              width={400}
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-semibold mb-2">2018 Acme SUV</h3>
-              <p className="text-gray-500 dark:text-gray-400 mb-4">
-                Explore the great outdoors in this rugged and capable SUV.
-              </p>
-              <div className="flex justify-between items-center">
-                <span className="text-lg font-semibold">$30,000</span>
-                <Button
-                  style={{
-                    backgroundColor: "#004AAD",
-                  }}
-                  variant="primary"
-                >
-                  Buy Now
-                </Button>
-              </div>
-            </div>
-          </div>
+          
         </div>
+        )}
+
+        {products.length < 1 && (
+          <div className='container-fluid'>Retrieving Vehicles - Please wait for firebase...</div>
+        )}
       </div>
     
            
