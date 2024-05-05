@@ -148,9 +148,11 @@ const ProductManagement = () => {
           required
           onChange={(e)=>setCategory(e.target.value)} value={category}>
           <option value="">Select a category</option>
-          <option value="car">Car</option>
           <option value="motorcycle">Motorcycle</option>
-          <option value="bicycle">Bicycle</option>
+          <option value="4-seater">4 Seater</option>
+          <option value="7-seater">7 Seater</option>
+          <option value="Van-12-seater">Van 12 Seater</option>
+         
         </select>
       </div>
       <button
