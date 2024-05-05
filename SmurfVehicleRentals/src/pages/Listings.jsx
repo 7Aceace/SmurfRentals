@@ -245,9 +245,7 @@ useEffect(() => {
         </div>
         )}
 
-        {products.length < 1 && (
-          <div className='container-fluid'>Retrieving Vehicles - Please wait for firebase...</div>
-        )}
+       
       </div>
     
            
