@@ -10,6 +10,7 @@ import { Label } from "../components/ui/label"
 
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase/fire';
+import Vehicles from '../functions/Vehicles';
 
 
 
@@ -203,49 +204,26 @@ useEffect(() => {
             <Button
               className="w-full"
               style={{
-                backgroundColor: "#004AAD",
-              }}
+                backgroundColor: "#368ce7",
+                color: "#deecfb",
+                }}
               variant="primary"
             >
               Apply Filters
             </Button>
           </div>
         </div>
+
         {vehicles.length > 0 && (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-white dark:bg-gray-950 rounded-lg shadow-lg overflow-hidden">
-            <img
-              alt="Car Product"
-              className="w-full h-48 object-cover"
-              height={300}
-              src="/placeholder.svg"
-              style={{
-                aspectRatio: "400/300",
-                objectFit: "cover",
-              }}
-              width={400}
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-semibold mb-2">2023 Acme Sedan</h3>
-              <p className="text-gray-500 dark:text-gray-400 mb-4">Experience the smooth ride of this modern sedan.</p>
-              <div className="flex justify-between items-center">
-                <span className="text-lg font-semibold">$25,000</span>
-                <Button
-                  style={{
-                    backgroundColor: "#004AAD",
-                  }}
-                  variant="primary"
-                >
-                  Buy Now
-                </Button>
-              </div>
-            </div>
-          </div>
+         <Vehicles vehicles = {vehicles}/>
           
         </div>
         )}
 
-       
+        {vehicles.length < 1 && (
+          <div className='container-fluid'>Retrieving Vehicles - Please wait for firebase...</div>
+        )}
       </div>
     
            
