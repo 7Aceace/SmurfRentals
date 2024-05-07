@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../index.css';
+import { auth } from '../firebase/fire'; // Import auth object from Firebase
+import { setDoc, doc } from 'firebase/firestore'; // Import Firestore functions
+
 
 import { CarouselItem, CarouselContent, CarouselPrevious, CarouselNext, Carousel } from "../components/ui/carousel"
 import { Input } from "../components/ui/input"
@@ -17,28 +20,59 @@ import Vehicles from '../functions/Vehicles';
 
 
 
-const AppVehicleRentals = () => {
+const AppVehicleRentals = (props) => {
+  // User UID function
+  function GetUserUid(){
+    const [uid, setUid]=useState(null);
+    useEffect(()=>{
+        auth.onAuthStateChanged(user=>{
+            if(user){
+                setUid(user.uid);
+            }
+        })
+    },[])
+    return uid;
+  }
 
+  const uid = GetUserUid();
   
-//stateofvehicles
-const [vehicles, setVehicles] = useState([]);
+  // State of vehicles
+  const [vehicles, setVehicles] = useState([]);
+
+  // Retrieval of vehicles
+  const getVehicles = async () => {
+    const VehiclesCollection = await getDocs(collection(db, 'Vehicles'));
+    const vehiclesArray = [];
+    VehiclesCollection.forEach((doc) => {
+      var data = doc.data();
+      data.ID = doc.id;
+      vehiclesArray.push(data);
+    });
+    setVehicles(vehiclesArray);
+  }
+
+  useEffect(() => {
+    getVehicles();
+  }, []);
+
+  const addToRent = (vehicle) =>{
+    if(uid!==null){
+      let Vehicle = {...vehicle};
+      Vehicle['qty']=1;
+      Vehicle['TotalRentalPrice']=Vehicle.qty*Vehicle.price;
+      setDoc(doc(db, 'Cart ' + uid, vehicle.ID), Vehicle).then(()=>{
+          console.log('Successfully added to rentals!');
+      }).catch((error) => {
+        console.error("Error adding document: ", error);
+      });
+    }
+    else{
+      props.history.push('/login');
+    }
+  }
 
 
-//retrievalofvehicles
-const getVehicles = async () => {
-  const Vehicles = await getDocs(collection(db, 'Vehicles'));
-  const vehiclesArray = [];
-  Vehicles.forEach((doc) => {
-    var data = doc.data();
-    data.ID = doc.id;
-    vehiclesArray.push(data);
-  });
-  setVehicles(vehiclesArray);
-}
 
-useEffect(() => {
-  getVehicles();
-}, []);
  return (
 
         <div>
@@ -216,7 +250,7 @@ useEffect(() => {
 
         {vehicles.length > 0 && (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-         <Vehicles vehicles = {vehicles}/>
+         <Vehicles vehicles = {vehicles} addToRent = {addToRent}/>
           
         </div>
         )}

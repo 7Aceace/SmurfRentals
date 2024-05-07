@@ -1,8 +1,11 @@
 
 import React from 'react'
 import { Button } from "../components/ui/button"
-export const FuncVehicle = ({funcVehicle}) => {
-    console.log(funcVehicle);
+export const FuncVehicle = ({funcVehicle, addToRent}) => {
+    //console.log(funcVehicle);
+    const handleAddToRent=()=>{
+        addToRent(funcVehicle);
+    }   
     return (
     
         <div className="bg-white dark:bg-gray-950 rounded-lg shadow-lg overflow-hidden">
@@ -27,6 +30,7 @@ export const FuncVehicle = ({funcVehicle}) => {
                     color: "#deecfb",
                 }}
                 variant="primary"
+                onClick = {handleAddToRent}
             >
                 Rent Now
             </Button>
