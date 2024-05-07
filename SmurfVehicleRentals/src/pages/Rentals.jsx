@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { auth, db } from '../firebase/fire'; 
 import { UserAuth } from '../context/AuthContext';
 import { collection, onSnapshot, query } from "firebase/firestore";
-import { ViewRental } from '../components/component/view-rental';
+import { ViewRental } from '../components/component/IndivRentedV';
 import RentedVehicles from '../functions/RentedVehicles';
+import Testimonials from '../components/component/Testimonials';
 const Rentals = () => {
     const { user } = UserAuth();
 
@@ -52,6 +53,7 @@ const Rentals = () => {
             <p>Rentals of {user?.firstName}</p>
             {rentedVehicles.length > 0 && (
                <RentedVehicles rentedVehicles={rentedVehicles}/>
+
                 
             )}
 
@@ -59,6 +61,11 @@ const Rentals = () => {
                        
                        <p>None</p>
             )}
+            if({rentedVehicles.length >0})
+            {
+              <Testimonials/>
+            }
+           
         </div>
     );
 };

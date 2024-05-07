@@ -1,11 +1,11 @@
-import { Label } from "../../components/ui/label"
-import { Button } from "../../components/ui/button"
-import { PopoverTrigger, PopoverContent, Popover } from "../../components/ui/popover"
-import { Calendar } from "../../components/ui/calendar"
-import { SelectValue, SelectTrigger, SelectItem, SelectContent, Select } from "../../components/ui/select"
-import { AvatarImage, AvatarFallback, Avatar } from "../../components/ui/avatar"
+import { Label } from "../ui/label"
+import { Button } from "../ui/button"
+import { PopoverTrigger, PopoverContent, Popover } from "../ui/popover"
+import { Calendar } from "../ui/calendar"
+import { SelectValue, SelectTrigger, SelectItem, SelectContent, Select } from "../ui/select"
+import { AvatarImage, AvatarFallback, Avatar } from "../ui/avatar"
 
-export function ViewRental() {
+export const IndivRentedV = ({rentedVehicle}) =>{
   return (<>
     <section className="w-full py-12 md:py-24 lg:py-32">
       <div className="container grid gap-8 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
@@ -14,12 +14,12 @@ export function ViewRental() {
             alt="Vehicle"
             className="aspect-video w-full rounded-lg object-cover"
             height={500}
-            src="/placeholder.svg"
+            src={rentedVehicle.url}
             width={800} />
         </div>
         <div className="space-y-4">
           <div>
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">2023 Acme Roadster</h1>
+            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{rentedVehicle.name}</h1>
             <p className="text-gray-500 md:text-xl dark:text-gray-400">
               Experience the thrill of the open road in this sleek and powerful sports car.
             </p>
@@ -155,87 +155,7 @@ export function ViewRental() {
         </div>
       </div>
     </section>
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
-      <div className="container grid gap-8 px-4 md:px-6">
-        <div>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">What Renters Say</h2>
-          <div className="grid gap-6 pt-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div
-              className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-800 dark:bg-gray-950">
-              <div className="flex items-center gap-4">
-                <Avatar className="h-10 w-10">
-                  <AvatarImage alt="@username" src="/placeholder-avatar.jpg" />
-                  <AvatarFallback>JD</AvatarFallback>
-                </Avatar>
-                <div>
-                  <div className="font-medium">John Doe</div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">Rented on 4/15/2023</div>
-                </div>
-              </div>
-              <div className="mt-4 flex items-center gap-2">
-                <StarIcon className="h-5 w-5 fill-primary" />
-                <StarIcon className="h-5 w-5 fill-primary" />
-                <StarIcon className="h-5 w-5 fill-primary" />
-                <StarIcon className="h-5 w-5 fill-primary" />
-                <StarIcon className="h-5 w-5 fill-muted stroke-muted-foreground" />
-              </div>
-              <p className="mt-4 text-gray-500 dark:text-gray-400">
-                The Acme Roadster was an absolute joy to drive. It handled like a dream and the amenities made the
-                trip even more enjoyable.
-              </p>
-            </div>
-            <div
-              className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-800 dark:bg-gray-950">
-              <div className="flex items-center gap-4">
-                <Avatar className="h-10 w-10">
-                  <AvatarImage alt="@username" src="/placeholder-avatar.jpg" />
-                  <AvatarFallback>JD</AvatarFallback>
-                </Avatar>
-                <div>
-                  <div className="font-medium">Jane Doe</div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">Rented on 5/1/2023</div>
-                </div>
-              </div>
-              <div className="mt-4 flex items-center gap-2">
-                <StarIcon className="h-5 w-5 fill-primary" />
-                <StarIcon className="h-5 w-5 fill-primary" />
-                <StarIcon className="h-5 w-5 fill-primary" />
-                <StarIcon className="h-5 w-5 fill-primary" />
-                <StarIcon className="h-5 w-5 fill-primary" />
-              </div>
-              <p className="mt-4 text-gray-500 dark:text-gray-400">
-                I was blown away by the performance and style of the Acme Roadster. It made my road trip an
-                unforgettable experience.
-              </p>
-            </div>
-            <div
-              className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-800 dark:bg-gray-950">
-              <div className="flex items-center gap-4">
-                <Avatar className="h-10 w-10">
-                  <AvatarImage alt="@username" src="/placeholder-avatar.jpg" />
-                  <AvatarFallback>JD</AvatarFallback>
-                </Avatar>
-                <div>
-                  <div className="font-medium">Alex Johnson</div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">Rented on 6/1/2023</div>
-                </div>
-              </div>
-              <div className="mt-4 flex items-center gap-2">
-                <StarIcon className="h-5 w-5 fill-primary" />
-                <StarIcon className="h-5 w-5 fill-primary" />
-                <StarIcon className="h-5 w-5 fill-primary" />
-                <StarIcon className="h-5 w-5 fill-muted stroke-muted-foreground" />
-                <StarIcon className="h-5 w-5 fill-muted stroke-muted-foreground" />
-              </div>
-              <p className="mt-4 text-gray-500 dark:text-gray-400">
-                The Acme Roadster was a great rental, but I did have some minor issues with the infotainment system.
-                Overall, a solid choice.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
   </>);
 }
 

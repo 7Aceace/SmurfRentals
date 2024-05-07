@@ -16,7 +16,7 @@ export const FuncVehicle = ({funcVehicle, addToRent}) => {
         style={{
             aspectRatio: "400/300",
             objectFit: "cover",
-            width: "100%",
+          
         }}
     />
     <div className="p-4">

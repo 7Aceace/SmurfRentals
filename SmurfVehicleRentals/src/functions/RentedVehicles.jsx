@@ -1,10 +1,10 @@
 import React from 'react';
-import IndivRented from './IndivRented';
+import {IndivRentedV} from '../components/component/IndivRentedV';
 const RentedVehicles = ({rentedVehicles}) => {
  return rentedVehicles.map((rentedVehicle)=>(
-    <>
-    <IndivRented key={rentedVehicle.ID} rentedVehicle = {rentedVehicle}/>
-    </>
+    
+    <IndivRentedV key={rentedVehicle.ID} rentedVehicle = {rentedVehicle}/>
+   
 
     ));
 };
