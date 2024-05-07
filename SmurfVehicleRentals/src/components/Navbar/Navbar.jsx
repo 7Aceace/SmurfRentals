@@ -34,6 +34,7 @@ const Navbar = ({children}) => {
           <ul>
             <li> <Link to ='/Login'> Login</Link></li>
             <li><Link to ='/User'>User</Link></li>
+            <li><Link to ='/Rentals'>R</Link></li>
             {user?.role === "admin" && <li>
                 <Link to={'/admin-dashboard'}>Admin Dashboard</Link>
             </li>}

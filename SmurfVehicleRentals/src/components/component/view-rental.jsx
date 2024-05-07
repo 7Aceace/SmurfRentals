@@ -1,7 +1,7 @@
-import { Label } from "../../components//label"
-import { Button } from "../../components/button"
-import { PopoverTrigger, PopoverContent, Popover } from "../../components/popover"
-import { Calendar } from "../../components/calendar"
+import { Label } from "../../components/ui/label"
+import { Button } from "../../components/ui/button"
+import { PopoverTrigger, PopoverContent, Popover } from "../../components/ui/popover"
+import { Calendar } from "../../components/ui/calendar"
 import { SelectValue, SelectTrigger, SelectItem, SelectContent, Select } from "../../components/ui/select"
 import { AvatarImage, AvatarFallback, Avatar } from "../../components/ui/avatar"
 

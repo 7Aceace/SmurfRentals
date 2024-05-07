@@ -19,7 +19,7 @@ const generateRandomID = () => {
 
     for(let i = 0; i < 16; i++)
     {
-        const randomIndex = (Math.random() * chacracters.length);
+        const randomIndex = (Math.random() * characters.length);
         randomID+= characters.charAt(randomIndex);
     }
     return randomID;

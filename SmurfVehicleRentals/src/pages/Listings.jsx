@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../index.css';
-import { auth } from '../firebase/fire'; // Import auth object from Firebase
-import { setDoc, doc } from 'firebase/firestore'; // Import Firestore functions
+import { auth } from '../firebase/fire'; 
+import { setDoc, doc } from 'firebase/firestore';
 
 
 import { CarouselItem, CarouselContent, CarouselPrevious, CarouselNext, Carousel } from "../components/ui/carousel"
@@ -60,7 +60,7 @@ const AppVehicleRentals = (props) => {
       let Vehicle = {...vehicle};
       Vehicle['qty']=1;
       Vehicle['TotalRentalPrice']=Vehicle.qty*Vehicle.price;
-      setDoc(doc(db, 'Cart ' + uid, vehicle.ID), Vehicle).then(()=>{
+      setDoc(doc(db, 'Rentals of ' + uid, vehicle.ID), Vehicle).then(()=>{
           console.log('Successfully added to rentals!');
       }).catch((error) => {
         console.error("Error adding document: ", error);

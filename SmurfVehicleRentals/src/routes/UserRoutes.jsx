@@ -6,7 +6,7 @@ import Login from '../pages/Login'
 import Navbar from '../components/Navbar/Navbar'
 import UserDashboard from '../pages/UserDashboard'
 import AdminDashboard from '../pages/AdminDashboard'
-
+import Rentals from '../pages/Rentals'
 
 export default function UserRoutes() {
   return (
@@ -23,6 +23,7 @@ export default function UserRoutes() {
     <Route path='/login' element = {<Login/>}/>
     <Route path='/*' element = {<Home/>}/>
     <Route path='/User' element={<UserDashboard/>}/>
+    <Route path='/Rentals' element={<Rentals/>}/>
     <Route path='admin-dashboard' element={<AdminDashboard/>}/>
     </Routes>
     </>
