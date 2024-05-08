@@ -1,13 +1,26 @@
 import { Label } from "../ui/label"
-import {Plus} from "../component/@radix-ui/react-icons"
+import {plus} from "react-icons-kit/feather/plus"
+import {Icon} from "react-icons-kit"
+import {minus} from "react-icons-kit/feather/minus"
 import { Button } from "../ui/button"
 import { PopoverTrigger, PopoverContent, Popover } from "../ui/popover"
 import { Calendar } from "../ui/calendar"
 import { Checkbox } from "../ui/checkbox"
 import { SelectValue, SelectTrigger, SelectItem, SelectContent, Select } from "../ui/select"
 import { AvatarImage, AvatarFallback, Avatar } from "../ui/avatar"
+import '../../index.css'
+export const IndivRentedV = ({rentedVehicle, vehicleRentedIncrease, vehicleRentedDecrease, vehicleRentedDelete}) =>{
+  const handlerentedVehicleIncrease = () =>{
+    vehicleRentedIncrease(rentedVehicle);
+  }
+  const handlerentedVehicleDecrease = () =>{
+    vehicleRentedDecrease(rentedVehicle);
+  }
 
-export const IndivRentedV = ({rentedVehicle}) =>{
+  const handlerentedVehicleDelete = () => {
+    vehicleRentedDelete(rentedVehicle);
+  };
+
   return (
     <>
     <section className="w-full py-12 md:py-24 lg:py-32 bg-[#F3F4F6] dark:bg-[#1F2937] px-4 md:px-6 shadow-lg">
@@ -88,13 +101,15 @@ export const IndivRentedV = ({rentedVehicle}) =>{
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Book Your Rental</h2>
             <div className="mt-8 grid gap-4">
               <div className="flex items-center gap-2">
-                <Button className="flex-1" variant="outline">
-                  <MinusIcon className="h-4 w-4" />
-                </Button>
-                <div className="text-2xl font-bold">1</div>
-                <Button className="flex-1" variant="outline">
-                  <PlusIcon className="h-4 w-4" />
-                </Button>
+                <div className="product-text quantity-box">
+                  <div className="action-btns-plus" onClick={handlerentedVehicleDecrease}>
+                      <Icon icon={minus} size={20}/>
+                  </div>
+                  <div>{rentedVehicle.qty}</div>
+                  <div className="action-btns-plus" onClick={handlerentedVehicleIncrease}>
+                  <Icon icon={plus} size={20}/>
+                  </div>
+                </div>
               </div>
               <div className="grid gap-4">
                 <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-800 dark:bg-[#1F2937]">
@@ -135,7 +150,7 @@ export const IndivRentedV = ({rentedVehicle}) =>{
                   <Button className="flex-1 mr-2" size="lg">
                     Book Now
                   </Button>
-                  <Button size="lg" variant="destructive">
+                  <Button size="lg" variant="destructive" onClick={handlerentedVehicleDelete}>
                     <TrashIcon className="h-4 w-4 mr-2" />
                     Delete
                   </Button>
