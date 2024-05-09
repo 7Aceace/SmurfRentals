@@ -9,6 +9,11 @@ import { Checkbox } from "../ui/checkbox"
 import { SelectValue, SelectTrigger, SelectItem, SelectContent, Select } from "../ui/select"
 import { AvatarImage, AvatarFallback, Avatar } from "../ui/avatar"
 import '../../index.css'
+import { differenceInDays } from 'date-fns';
+import { useState } from "react"
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+
 export const IndivRentedV = ({rentedVehicle, vehicleRentedIncrease, vehicleRentedDecrease, vehicleRentedDelete}) =>{
   const handlerentedVehicleIncrease = () =>{
     vehicleRentedIncrease(rentedVehicle);
@@ -20,6 +25,21 @@ export const IndivRentedV = ({rentedVehicle, vehicleRentedIncrease, vehicleRente
   const handlerentedVehicleDelete = () => {
     vehicleRentedDelete(rentedVehicle);
   };
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
+  
+  const handleStartDateChange = (date) => {
+    setStartDate(date);
+  }
+  
+  const handleEndDateChange = (date) => {
+    setEndDate(date);
+  }
+const totalDays = differenceInDays(endDate, startDate);
+const totalPrice = rentedVehicle.price * totalDays * rentedVehicle.qty;
+
+
+
 
   return (
     <>
@@ -140,9 +160,9 @@ export const IndivRentedV = ({rentedVehicle, vehicleRentedIncrease, vehicleRente
                     <div className="flex items-center justify-between">
                       <div>
                         <div className="text-lg font-medium">Total</div>
-                        <div className="text-2xl font-bold">₱{rentedVehicle.price*5}</div>
+                        <div className="text-2xl font-bold">₱{totalPrice}</div>
                       </div>
-                      <div className="text-2xl font-bold">5 days</div>
+                      <div className="text-2xl font-bold">{totalDays}</div>
                     </div>
                   </div>
                 </div>
@@ -161,37 +181,29 @@ export const IndivRentedV = ({rentedVehicle, vehicleRentedIncrease, vehicleRente
           <div className="grid gap-4">
             <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-800 dark:bg-[#1F2937]">
               <div className="grid gap-4">
+              
+              <div className="grid gap-2">
+  <label htmlFor="start-date" className="font-bold text-lg">Start Date</label>
+  <DatePicker
+    id="start-date"
+    selected={startDate}
+    onChange={handleStartDateChange}
+    className="border border-gray-300 rounded p-2 focus:outline-none focus:border-blue-500"
+  />
+</div>
+<div className="grid gap-2">
+  <label htmlFor="end-date" className="font-bold text-lg">End Date</label>
+  <DatePicker
+    id="end-date"
+    selected={endDate}
+    onChange={handleEndDateChange}
+    className="border border-gray-300 rounded p-2 focus:outline-none focus:border-blue-500"
+  />
+</div>
+             
                 <div className="grid gap-2">
-                  <Label htmlFor="start-date">Start Date</Label>
-                  <Popover>
-                    <PopoverTrigger asChild>
-                      <Button className="w-full justify-start text-left font-normal" id="start-date" variant="outline">
-                        <CalendarDaysIcon className="mr-2 h-4 w-4 -translate-x-1" />
-                        June 1, 2023
-                      </Button>
-                    </PopoverTrigger>
-                    <PopoverContent align="start" className="w-auto p-0">
-                      <Calendar initialFocus mode="single" />
-                    </PopoverContent>
-                  </Popover>
-                </div>
-                <div className="grid gap-2">
-                  <Label htmlFor="end-date">End Date</Label>
-                  <Popover>
-                    <PopoverTrigger asChild>
-                      <Button className="w-full justify-start text-left font-normal" id="end-date" variant="outline">
-                        <CalendarDaysIcon className="mr-2 h-4 w-4 -translate-x-1" />
-                        June 6, 2023
-                      </Button>
-                    </PopoverTrigger>
-                    <PopoverContent align="start" className="w-auto p-0">
-                      <Calendar initialFocus mode="single" />
-                    </PopoverContent>
-                  </Popover>
-                </div>
-                <div className="grid gap-2">
-                  <Label htmlFor="total-days">Total Days</Label>
-                  <div className="text-2xl font-bold text-gray-500 dark:text-gray-400">5 days</div>
+                  <Label htmlFor="total-days" className="font-bold text-lg">Total Days</Label>
+                  <div className="text-2xl font-bold text-gray-500 dark:text-gray-400">{totalDays}</div>
                 </div>
               </div>
             </div>

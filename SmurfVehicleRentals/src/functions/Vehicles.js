@@ -8,9 +8,9 @@ const Vehicles = ({vehicles, addToRent}) => {
     <FuncVehicle key={funcVehicle.ID} funcVehicle={funcVehicle}
     addToRent={addToRent}
     />
-
+   
 
  ));
-};
+}; 
 
-export default Vehicles;
+export default Vehicles;  
