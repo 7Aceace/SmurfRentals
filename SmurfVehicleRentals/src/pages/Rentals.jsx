@@ -9,12 +9,12 @@ import { doc, updateDoc, deleteDoc } from "firebase/firestore";
 import { Separator } from "../components/ui/separator"
 import '../components/component/summary.css'
 import StripeCheckout from 'react-stripe-checkout'
-
+import { getDocs } from 'firebase/firestore';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom'
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
-import { ToastContainer } from 'react-toastify';
+import FooterN from '../components/FooterN';
 
 
 const Rentals = () => {
@@ -168,6 +168,9 @@ const handleToken = async(token) =>{
  })
  console.log(response);
  let {status} = response.data;
+ console.log(status);
+
+
  if(status === 'success'){
     navigate('/');
     toast.success('Your order has been placed successfully', {
@@ -179,6 +182,14 @@ const handleToken = async(token) =>{
       draggable: false,
       progress: undefined,
     });
+    
+    const uid = auth.currentUser.uid;
+    const q = query(collection(db, 'Rentals of ' + uid));
+    const snapshot = await getDocs(q);
+    snapshot.forEach((doc) => {
+        deleteDoc(doc.ref);
+    });
+    
  }
  else{
     alert('Something went wrong in checkout');
@@ -265,9 +276,9 @@ useEffect(() => {
                                   name='All Rentals'
                                   amount={totalPrice*100}>
 
-
+                                
                                 </StripeCheckout>
-                                <ToastContainer autoClose={5000} hideProgressBar={true} />
+                                <ToastContainer />
                               </div>
                             </div>
                           </div>
@@ -286,7 +297,7 @@ useEffect(() => {
             {
               <Testimonials/>
             }
-           
+        <FooterN/>
         </div>
     );
 };

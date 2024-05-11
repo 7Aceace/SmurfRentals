@@ -14,7 +14,7 @@ import { Label } from "../components/ui/label"
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase/fire';
 import Vehicles from '../functions/Vehicles';
-
+import FooterN from '../components/FooterN';
 
 
 
@@ -260,8 +260,9 @@ const AppVehicleRentals = (props) => {
         )}
       </div>
     
-           
+      <FooterN/>
     </div>
+    
     );
 };
 

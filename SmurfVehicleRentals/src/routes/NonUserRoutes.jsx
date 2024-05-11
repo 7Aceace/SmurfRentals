@@ -10,10 +10,11 @@ import Navbar from '../components/Navbar/Navbar';
 export default function NonUserRoutes() {
   return (
     <>
-    <div className='container'>
-
+    <div className='container'> 
     <Navbar/>
     </div>
+   
+    
     <Routes>
     <Route path='/' element={<Home />} />
     <Route path='/login' element={<Login />} />
