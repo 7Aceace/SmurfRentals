@@ -8,6 +8,7 @@ import UserDashboard from '../pages/UserDashboard'
 import AdminDashboard from '../pages/AdminDashboard'
 import Rentals from '../pages/Rentals'
 import FooterN from '../components/FooterN';
+import Contact from '../pages/Contact'
 export default function UserRoutes() {
   return (
     <>
@@ -22,6 +23,7 @@ export default function UserRoutes() {
     <Routes>
     <Route path='/' element = {<Home/>}/>
     <Route path='/Vehicles' element = {<Listings/>}/>
+    <Route path='ContactUs' element={<Contact/>}/>
     <Route path='/login' element = {<Login/>}/>
     <Route path='/*' element = {<Home/>}/>
     <Route path='/User' element={<UserDashboard/>}/>

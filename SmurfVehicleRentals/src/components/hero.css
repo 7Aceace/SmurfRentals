@@ -28,13 +28,18 @@
   margin: 0 0 30px;
 }
 
-
+.hero-block .carousel-caption {
+  display: none;
+}
 
 .hero-block .carousel-control {
   width: 15%;
 }
 
-
+.hero-block .carousel-caption {
+  left: 7%;
+  right: 7%;
+}
 
 .hero-block .carousel-control {
   width: 5%;
@@ -43,25 +48,3 @@
 .hero-block p {
   margin: 0 0 25px;
 }
-
-.hero-block .carousel-caption {
-  opacity: 1; /* Set opacity to make the caption visible */
-  position: absolute;
-  bottom: 50px; /* Adjust vertical position */
-  left: 0;
-  right: 0;
-  text-align: center; /* Center align text */
-  padding: 20px; /* Add padding for better appearance */
-}
-
-.hero-block .btn-rent {
-  margin-top: 20px; /* Adjust margin for button positioning */
-}
-.hero-block .btn-rent-blue {
-  background-color: blue;
-  color: white;
-}
-.hero-block .carousel-control {
-  width: 5%;
-}
-

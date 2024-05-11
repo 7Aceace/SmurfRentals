@@ -15,7 +15,7 @@ import {useNavigate} from 'react-router-dom'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import { ToastContainer } from 'react-toastify';
-
+import FooterN from '../components/FooterN';
 
 const Rentals = () => {
     const { user } = UserAuth();
@@ -286,7 +286,7 @@ useEffect(() => {
             {
               <Testimonials/>
             }
-           
+          <FooterN/>
         </div>
     );
 };
