@@ -7,7 +7,7 @@ import Navbar from '../components/Navbar/Navbar'
 import UserDashboard from '../pages/UserDashboard'
 import AdminDashboard from '../pages/AdminDashboard'
 import Rentals from '../pages/Rentals'
-
+import FooterN from '../components/FooterN';
 export default function UserRoutes() {
   return (
     <>
@@ -15,6 +15,8 @@ export default function UserRoutes() {
       <div className='container'>
       <h1>LOGGEDIN</h1>
       <Navbar/>
+      
+
       </div>
     
     <Routes>
@@ -26,6 +28,7 @@ export default function UserRoutes() {
     <Route path='/Rentals' element={<Rentals/>}/>
     <Route path='admin-dashboard' element={<AdminDashboard/>}/>
     </Routes>
+   
     </>
   )
 }
