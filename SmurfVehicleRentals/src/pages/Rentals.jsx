@@ -9,6 +9,14 @@ import { doc, updateDoc, deleteDoc } from "firebase/firestore";
 import { Separator } from "../components/ui/separator"
 import '../components/component/summary.css'
 import StripeCheckout from 'react-stripe-checkout'
+
+import axios from 'axios';
+import {useNavigate} from 'react-router-dom'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify';
+
+
 const Rentals = () => {
     const { user } = UserAuth();
 
@@ -147,6 +155,36 @@ const vehicleRentedDelete = (rentedVehicle) => {
 
 const [totalVehicles, setTotalVehicles] = useState(0);
 
+
+//  charging payment
+const navigate = useNavigate();
+const handleToken = async(token) =>{
+ // console.log(token)
+ const rental = {name: 'All Rentals', totalPrice}
+ const response = await axios.post('http://localhost:8080/checkout', {
+    token,
+    rental
+
+ })
+ console.log(response);
+ let {status} = response.data;
+ if(status === 'success'){
+    navigate('/');
+    toast.success('Your order has been placed successfully', {
+      position: 'top-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      progress: undefined,
+    });
+ }
+ else{
+    alert('Something went wrong in checkout');
+ }
+}
+
 useEffect(() => {
   auth.onAuthStateChanged(user => {
     if (user) {
@@ -219,7 +257,17 @@ useEffect(() => {
                               <div className="flex justify-between items-center">
                                 <span className="text-gray-900 dark:text-gray-100 font-bold">Total</span>
                                 <span className="text-gray-900 dark:text-gray-100 font-bold">{totalPrice}</span>
-                                <StripeCheckout></StripeCheckout>
+                                <StripeCheckout
+                                  stripeKey= 'pk_test_51PEuNtP4pK701krTnhbsyHxGPrWnU4hgcz5k4GVX4bn8mZ91lQneIn4E17T2C9mmEHY9ZPH6x7gq8N9sbonxxyyZ00fw0sjTIV'
+                                  token={handleToken}
+                                  billingAddress
+                                  shippingAddress
+                                  name='All Rentals'
+                                  amount={totalPrice*100}>
+
+
+                                </StripeCheckout>
+                                <ToastContainer autoClose={5000} hideProgressBar={true} />
                               </div>
                             </div>
                           </div>
