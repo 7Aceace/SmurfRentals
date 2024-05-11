@@ -8,6 +8,7 @@ import { CarouselItem, CarouselContent, CarouselPrevious, CarouselNext, Carousel
 import { CardHeader, CardContent, Card } from "../../components/ui/card"
 import { AvatarImage, AvatarFallback, Avatar } from "../../components/ui/avatar"
 import { Link } from "react-router-dom" 
+import  Map  from "../Map"
 import '../../index.css'
 
 export function BookNow() {
@@ -83,13 +84,7 @@ export function BookNow() {
                   </form>
                 </div>
                 <div className="col-span-1 md:col-span-1">
-                  <img
-                    alt="Map"
-                    className="w-full aspect-square rounded-lg"
-                    height={800}
-                    src="/placeholder.svg"
-                    width={800}
-                  />
+                  <Map/>
                 </div>
               </div>
               <div className="text-center">
@@ -155,13 +150,7 @@ export function BookNow() {
                   </form>
                 </div>
                 <div className="col-span-1 md:col-span-1">
-                  <img
-                    alt="Map"
-                    className="w-full aspect-square rounded-lg"
-                    height={800}
-                    src="/placeholder.svg"
-                    width={800}
-                  />
+                <Map/>
                 </div>
               </div>
               <div className="text-center">
