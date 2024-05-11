@@ -14,8 +14,6 @@ import axios from 'axios';
 import {useNavigate} from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
-import { ToastContainer } from 'react-toastify';
-import FooterN from '../components/FooterN';
 import FooterN from '../components/FooterN';
 
 
@@ -299,7 +297,7 @@ useEffect(() => {
             {
               <Testimonials/>
             }
-           
+           <FooterN/>
         </div>
     );
 };
