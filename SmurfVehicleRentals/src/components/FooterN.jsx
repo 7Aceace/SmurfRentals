@@ -1,5 +1,6 @@
 import React from 'react';
 import '../components/FooterN.css'
+import { Link } from 'react-router-dom';
 const MyComponent = () => {
  return (
    
@@ -13,8 +14,8 @@ const MyComponent = () => {
             <li className="inline-block py-2 px-3 text-white uppercase font-medium tracking-wide">Product</li>
             <li><a href="#" className="inline-block py-2 pl-3 pr-5 text-gray-500 hover:text-white no-underline">Features</a></li>
             <li><a href="#" className="inline-block py-2 pl-3 pr-5 text-gray-500 hover:text-white no-underline">Integrations</a></li>
-            <li><a href="#" className="inline-block py-2 pl-3 pr-5 text-gray-500 hover:text-white no-underline">Pricing</a></li>
-            <li><a href="#" className="inline-block py-2 pl-3 pr-5 text-gray-500 hover:text-white no-underline">FAQ</a></li>
+            <li  className="inline-block py-2 pl-3 pr-5 text-gray-500 hover:text-white no-underline"> <Link to ='/Blogs'> Blogs</Link></li>
+            <li className="inline-block py-2 pl-3 pr-5 text-gray-500 hover:text-white no-underline"> <Link to ='/FAQ'>FAQ</Link></li>
           </ul>
           <ul className="text-gray-700 list-none p-0 font-thin flex flex-col text-left w-full">
             <li className="inline-block py-2 px-3 text-white uppercase font-medium tracking-wide">Company</li>
