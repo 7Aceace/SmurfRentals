@@ -4,7 +4,7 @@ import fb from '../../assets/fblogo.png'
 import insta from '../../assets/instalogo.png'
 import yelp from '../../assets/yelplogo.png'
 import google from '../../assets/glogo.png'
-
+import { Link } from 'react-router-dom'
 function Footer() {
   return (
     <div className='footer'>
@@ -49,9 +49,9 @@ function Footer() {
                     <a href=''>
                         <p>Career</p>
                     </a>
-                    <a href=''>
-                        <p></p>
-                    </a>
+                    
+                        <p>FAQ</p>
+                   
                     <a href=''>
                         <p>Contact</p>
                     </a>

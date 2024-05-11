@@ -9,6 +9,8 @@ import AdminDashboard from '../pages/AdminDashboard'
 import Rentals from '../pages/Rentals'
 import FooterN from '../components/FooterN';
 import Contact from '../pages/Contact'
+import  FAQv  from '../pages/FAQV'
+import  Blogs  from '../pages/BlogsPage'
 export default function UserRoutes() {
   return (
     <>
@@ -29,6 +31,8 @@ export default function UserRoutes() {
     <Route path='/User' element={<UserDashboard/>}/>
     <Route path='/Rentals' element={<Rentals/>}/>
     <Route path='admin-dashboard' element={<AdminDashboard/>}/>
+    <Route path='/FAQ' element={<FAQv/>}/>
+    <Route path='/Blogs' element={<Blogs/>}/>
     </Routes>
    
     </>

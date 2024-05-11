@@ -9,7 +9,11 @@ import { Label } from "../../components/ui/label"
 import '../../index.css'
 export function UserDashboardJS() {
   return (
-    (<div className="flex flex-col min-h-screen w-full">
+
+    (
+    <div className="w-full bg-white py-12 md:py-24 lg:py-32">
+    
+    <div className="flex flex-col min-h-screen w-full">
       <header
         className="flex h-14 items-center gap-4 border-   b bg-gray-100/40 px-6 dark:bg-gray-800/40 lg:h-[60px]">
         <div className="w-full flex-1">
@@ -232,6 +236,7 @@ export function UserDashboardJS() {
           </TabsContent>
         </Tabs>
       </main>
+      </div>
     </div>)
   );
 }
