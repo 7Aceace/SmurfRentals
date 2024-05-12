@@ -1,7 +1,12 @@
 import React from 'react';
+
 import '../components/FooterN.css'
 import { Link } from 'react-router-dom';
+
+
+
 const MyComponent = () => {
+ 
  return (
    
     <footer className="bg-gray-900 text-white pt-12 pb-8 px-4">
@@ -20,7 +25,9 @@ const MyComponent = () => {
           <ul className="text-gray-700 list-none p-0 font-thin flex flex-col text-left w-full">
             <li className="inline-block py-2 px-3 text-white uppercase font-medium tracking-wide">Company</li>
             <li><a href="#" className="inline-block py-2 pl-3 pr-5 text-gray-500 hover:text-white no-underline">Privacy</a></li>
-            <li><a href="#" className="inline-block py-2 pl-3 pr-5 text-gray-500 hover:text-white no-underline">Terms of Service</a></li>
+            <li className="inline-block py-2 pl-3 pr-5 text-gray-500 hover:text-white no-underline">
+              <Link to='/TermsandConditions'>Terms and Conditions</Link>
+              </li>
           </ul>
           <ul className="text-gray-700 list-none p-0 font-thin flex flex-col text-left w-full">
             <li className="inline-block py-2 px-3 text-white uppercase font-medium tracking-wide">Developers</li>

@@ -12,6 +12,7 @@ import Contact from '../pages/Contact'
 import  FAQv  from '../pages/FAQV'
 import  Blogs  from '../pages/BlogsPage'
 import Bookings from '../pages/Bookings'
+import TermsandConditions from '../components/component/TermsandConditions'
 export default function UserRoutes() {
   return (
     <>
@@ -35,6 +36,7 @@ export default function UserRoutes() {
     <Route path='admin-dashboard' element={<AdminDashboard/>}/>
     <Route path='/FAQ' element={<FAQv/>}/>
     <Route path='/Blogs' element={<Blogs/>}/>
+    <Route path='/TermsandConditions' element={<TermsandConditions/>}/>
     </Routes>
    
     </>
