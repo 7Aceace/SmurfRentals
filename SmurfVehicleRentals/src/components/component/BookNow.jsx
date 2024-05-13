@@ -1,4 +1,7 @@
 
+import React, { useState } from 'react';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import { TabsTrigger, TabsList, TabsContent, Tabs } from "../../components/ui/tabs"
 import { Label } from "../../components/ui/label"
 import { Input } from "../../components/ui/input"
@@ -12,6 +15,12 @@ import  Map  from "../Map"
 import '../../index.css'
 
 export function BookNow() {
+  
+const [startDate, setStartDate] = useState(new Date());
+
+  
+const [endDate, setEndDate] = useState(new Date());
+
   return (
     <>
       <div className="w-full max-w-none mx-auto p-6 md:p-10 bg-white dark:bg-gray-900 rounded-lg shadow-lg">
@@ -31,23 +40,35 @@ export function BookNow() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="col-span-1 md:col-span-2">
                   <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="start-date">Start Date</Label>
-                      <div className="relative">
-                        <Input className="pr-10" id="start-date" placeholder="Select start date" type="text" />
+                  <div className="space-y-2 border-2 border-gray-300 rounded">
+                      <Label htmlFor="start-date-tours">Start Date</Label>
+                      <div className="relative w-full">
+                        <DatePicker 
+                          className="pr-10 w-full" 
+                          id="start-date-tours" 
+                          selected={startDate} 
+                          onChange={date => setStartDate(date)} 
+                          placeholderText="Select start date"
+                        />
                         <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                           <CalendarIcon className="w-5 h-5 text-gray-400" />
                         </div>
                       </div>
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="end-date">End Date</Label>
-                      <div className="relative">
-                        <Input className="pr-10" id="end-date" placeholder="Select end date" type="text" />
-                        <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                          <CalendarIcon className="w-5 h-5 text-gray-400" />
+                    <div className="space-y-2 border-2 border-gray-300 rounded">
+                    <Label htmlFor="end-date">End Date</Label>
+                        <div className="relative">
+                          <DatePicker 
+                            className="pr-10" 
+                            id="end-date" 
+                            selected={endDate} 
+                            onChange={date => setEndDate(date)} 
+                            placeholderText="Select end date"
+                          />
+                          <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                            <CalendarIcon className="w-5 h-5 text-gray-400" />
+                          </div>
                         </div>
-                      </div>
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="vehicle-type">Vehicle Type</Label>
@@ -97,23 +118,36 @@ export function BookNow() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="col-span-1 md:col-span-2">
                   <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
+                                        
+                    <div className="space-y-2 border-2 border-gray-300 rounded">
                       <Label htmlFor="start-date-tours">Start Date</Label>
                       <div className="relative">
-                        <Input className="pr-10" id="start-date-tours" placeholder="Select start date" type="text" />
+                        <DatePicker 
+                          className="pr-10" 
+                          id="start-date-tours" 
+                          selected={startDate} 
+                          onChange={date => setStartDate(date)} 
+                          placeholderText="Select start date"
+                        />
                         <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                           <CalendarIcon className="w-5 h-5 text-gray-400" />
                         </div>
                       </div>
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="end-date-tours">End Date</Label>
-                      <div className="relative">
-                        <Input className="pr-10" id="end-date-tours" placeholder="Select end date" type="text" />
-                        <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                          <CalendarIcon className="w-5 h-5 text-gray-400" />
+                    <div className="space-y-2 border-2 border-gray-300 rounded">
+                    <Label htmlFor="end-date">End Date</Label>
+                        <div className="relative">
+                          <DatePicker 
+                            className="pr-10" 
+                            id="end-date" 
+                            selected={endDate} 
+                            onChange={date => setEndDate(date)} 
+                            placeholderText="Select end date"
+                          />
+                          <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                            <CalendarIcon className="w-5 h-5 text-gray-400" />
+                          </div>
                         </div>
-                      </div>
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="tour-type">Tour Type</Label>

@@ -1,4 +1,4 @@
-
+import React, { useRef, useState} from 'react';
 import { Label } from "../../components/ui/label"
 import { Input } from "../../components/ui/input"
 import { Textarea } from "../../components/ui/textarea"
@@ -6,7 +6,44 @@ import { SelectValue, SelectTrigger, SelectItem, SelectContent, Select } from ".
 import { CardContent, CardFooter, Card } from "../../components/ui/card"
 import { Button } from "../../components/ui/button"
 import '../../index.css'
+
+import emailjs from '@emailjs/browser';
+
 export function ContactUs() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
+  const [vehicle, setVehicle] = useState('');
+
+  const form = useRef();  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      from_phone: phone,
+      message: message,
+      from_vehicle: vehicle,
+    };
+
+    emailjs.send('service_9xztwl4', 'template_x617itb', templateParams, 'Qa58PBXG4l8almZK4')
+    .then((response) => {
+      console.log('Email sent successfully', response.status, response.text);
+      setName('');
+      setEmail('');
+      setPhone('');
+      setMessage('');
+      setVehicle('');
+  })
+  .catch((error) => {
+    console.log('Email failed to send', error);
+  });
+  
+  
+  };
+
   return (
     (
     <>
@@ -16,29 +53,30 @@ export function ContactUs() {
         <h2 className="text-3xl font-bold">Contact Us</h2>
         <p className="text-gray-500 dark:text-gray-400">Fill out the form below to inquire about renting a vehicle.</p>
       </div>
+      <form onSubmit={handleSubmit}>
       <Card>
         <CardContent className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="name">Name</Label>
-              <Input id="name" placeholder="Enter your name" />
+              <Input id="name" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)} />
             </div>
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
-              <Input id="email" placeholder="Enter your email" type="email" />
+              <Input id="email" placeholder="Enter your email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
             </div>
           </div>
           <div className="space-y-2">
             <Label htmlFor="phone">Phone</Label>
-            <Input id="phone" placeholder="Enter your phone number" type="tel" />
+            <Input id="phone" placeholder="Enter your phone number" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} />
           </div>
           <div className="space-y-2">
             <Label htmlFor="message">Message</Label>
-            <Textarea id="message" placeholder="Enter your message" />
+            <Textarea id="message" placeholder="Enter your message" value={message} onChange={(e) => setMessage(e.target.value)} />
           </div>
           <div className="space-y-2">
             <Label htmlFor="vehicle">Vehicle Type</Label>
-            <Select id="vehicle">
+            <Select id="vehicle" value={vehicle} onChange={(e) => setVehicle(e.target.value)}>
               <SelectTrigger>
                 <SelectValue placeholder="Select vehicle type" />
               </SelectTrigger>
@@ -55,6 +93,7 @@ export function ContactUs() {
           <Button type="submit">Submit</Button>
         </CardFooter>
       </Card>
+    </form>
       </div>
     </div>
     <section className="w-full bg-white py-12 md:py-24 lg:py-32">
@@ -73,7 +112,7 @@ export function ContactUs() {
               alt="John Doe"
               className="h-36 w-36 rounded-full object-cover"
               height={150}
-              src="/placeholder.svg"
+              src="/PANGANORON.png"
               style={{
                 aspectRatio: "150/150",
                 objectFit: "cover",
@@ -94,7 +133,7 @@ export function ContactUs() {
               alt="Jane Smith"
               className="h-36 w-36 rounded-full object-cover"
               height={150}
-              src="/placeholder.svg"
+              src="/MONTENEGRO.jpg"
               style={{
                 aspectRatio: "150/150",
                 objectFit: "cover",

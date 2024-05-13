@@ -21,17 +21,17 @@ export function NavigationBar({children}) {
         </Link>
         <Link
           className="text-base font-medium text-gray-900 hover:underline underline-offset-4 dark:text-gray-50"
-          href="#">
+          to='/Vehicles'>
           Vehicles
         </Link>
         <Link
           className="text-base font-medium text-gray-900 hover:underline underline-offset-4 dark:text-gray-50"
-          href="#">
-          About
+          to='/Blogs'>
+          Blogs
         </Link>
         <Link
           className="text-base font-medium text-gray-900 hover:underline underline-offset-4 dark:text-gray-50"
-          href="#">
+          to='/ContactUs'>
           Contact
         </Link>
       </div>
@@ -46,7 +46,7 @@ export function NavigationBar({children}) {
         </form>
         <Link
           className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-base font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 ml-4"
-          href="#">
+          to='/Bookings'>
           Book Now
         </Link>
         <Link
@@ -73,15 +73,15 @@ export function NavigationBar({children}) {
               <DropdownMenuItem>
                 <div className="flex items-center gap-2">
                   <UserIcon className="h-4 w-4" />
-                  <span className="text-base">User Dashboard</span>
+                  <span className="text-base"> <Link to='/User'>User Dashboard</Link></span>
                 </div>
               </DropdownMenuItem>
-              <DropdownMenuItem>
+              {user?.role === 'admin' && <DropdownMenuItem>
                 <div className="flex items-center gap-2">
                   <UsersIcon className="h-4 w-4" />
                   <span className="text-base">Admin Dashboard</span>
                 </div>
-              </DropdownMenuItem>
+              </DropdownMenuItem>}
               <DropdownMenuSeparator />
               <DropdownMenuItem>
                 <div className="flex items-center gap-2">

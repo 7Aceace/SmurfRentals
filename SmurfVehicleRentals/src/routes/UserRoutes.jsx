@@ -16,18 +16,13 @@ import Bookings from '../pages/Bookings'
 import TermsandConditions from '../components/component/TermsandConditions'
 import { Blogs2 } from '../components/component/Blogs2'
 import { Blogs3 } from '../components/component/Blogs3'
+import { NavigationBar } from '../components/component/navigation-bar'
 
 export default function UserRoutes() {
   return (
     <>
     
-      <div className='container'>
-      <h1>LOGGEDIN</h1>
-      
-      <Navbar/>
-      
-
-      </div>
+      <NavigationBar/>
     
     <Routes>
     <Route path='/' element = {<Home/>}/>

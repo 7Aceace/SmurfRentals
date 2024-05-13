@@ -16,6 +16,9 @@ import { db } from '../firebase/fire';
 import Vehicles from '../functions/Vehicles';
 import FooterN from '../components/FooterN';
 
+import SuzukiJimny from '../assets/SuzukiJimny.png';
+import ToyotaFortuner from '../assets/ToyotaFortuner.png';
+import FordEverest from '../assets/FordEverest.png';
 
 
 
@@ -85,80 +88,82 @@ const AppVehicleRentals = (props) => {
               <div className="relative h-[400px] md:h-[500px] lg:h-[600px] w-full overflow-hidden">
                 <img
                   alt="Car Carousel Image"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full"
                   height={600}
-                  src="/placeholder.svg"
+                  src={SuzukiJimny}
                   style={{
                     aspectRatio: "1400/600",
-                    objectFit: "cover",
+                    
                   }}
                   width={1400}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
-                  <div className="max-w-2xl space-y-4">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white">
-                      Discover Your Dream Car
-                    </h1>
-                    <p className="text-lg sm:text-xl md:text-2xl text-gray-200">
-                      Browse our extensive collection of high-quality vehicles and find the perfect fit for your
-                      lifestyle.
-                    </p>
+                  <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
+                    <div className="max-w-2xl space-y-4">
+                      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-4">
+                        Discover Your Dream Car
+                      </h1>
+                      
+                      <p className="text-lg sm:text-xl md:text-2xl text-gray-200">
+                      <br/><br/><br/><br/>Browse our extensive collection of high-quality vehicles and find the perfect fit for your lifestyle.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
             </CarouselItem>
             <CarouselItem>
               <div className="relative h-[400px] md:h-[500px] lg:h-[600px] w-full overflow-hidden">
                 <img
                   alt="Car Carousel Image"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full"
                   height={600}
-                  src="/placeholder.svg"
+                  src={ToyotaFortuner}
                   style={{
                     aspectRatio: "1400/600",
-                    objectFit: "cover",
+                    
                   }}
                   width={1400}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
-                  <div className="max-w-2xl space-y-4">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+                  <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
+                    <div className="max-w-2xl space-y-4">
+                      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-4">
                       Experience the Thrill
-                    </h1>
-                    <p className="text-lg sm:text-xl md:text-2xl text-gray-200">
-                      Explore our selection of high-performance vehicles and unleash your driving passion.
-                    </p>
+                      </h1>
+                      
+                      <p className="text-lg sm:text-xl md:text-2xl text-gray-200">
+                      <br/><br/><br/><br/>Explore our selection of high-performance vehicles and unleash your driving passion.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
             </CarouselItem>
             <CarouselItem>
               <div className="relative h-[400px] md:h-[500px] lg:h-[600px] w-full overflow-hidden">
                 <img
                   alt="Car Carousel Image"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full"
                   height={600}
-                  src="/placeholder.svg"
+                  src={FordEverest}
                   style={{
                     aspectRatio: "1400/600",
-                    objectFit: "cover",
+                    
                   }}
                   width={1400}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
-                  <div className="max-w-2xl space-y-4">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+                  <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
+                    <div className="max-w-2xl space-y-4">
+                      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-4">
                       Elevate Your Driving Experience
-                    </h1>
-                    <p className="text-lg sm:text-xl md:text-2xl text-gray-200">
-                      Browse our premium selection of luxury vehicles and indulge in unparalleled comfort and style.
-                    </p>
+                      </h1>
+                      
+                      <p className="text-lg sm:text-xl md:text-2xl text-gray-200">
+                      <br/><br/><br/><br/>Browse our premium selection of luxury vehicles and indulge in unparalleled comfort and style.
+                </p>
+                    </div>
                   </div>
                 </div>
-              </div>
             </CarouselItem>
           </CarouselContent>
           <CarouselPrevious />
@@ -188,20 +193,20 @@ const AppVehicleRentals = (props) => {
               <h3 className="text-sm font-medium mb-2">Categories</h3>
               <div className="grid gap-2">
                 <Label className="flex items-center gap-2 cursor-pointer">
-                  <Checkbox id="category-sedan" />
-                  Sedans
+                  <Checkbox id="category-motorcycle" />
+                  Motorcycle
                 </Label>
                 <Label className="flex items-center gap-2 cursor-pointer">
-                  <Checkbox id="category-suv" />
-                  SUVs
+                  <Checkbox id="category-4seater" />
+                  4 Seater
                 </Label>
                 <Label className="flex items-center gap-2 cursor-pointer">
-                  <Checkbox id="category-truck" />
-                  Trucks
+                  <Checkbox id="category-7seater" />
+                  7 seater
                 </Label>
                 <Label className="flex items-center gap-2 cursor-pointer">
-                  <Checkbox id="category-sports" />
-                  Sports Cars
+                  <Checkbox id="category-van12seater" />
+                  Van 12 Seater
                 </Label>
               </div>
             </div>

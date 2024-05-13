@@ -21,7 +21,7 @@ const Navbar = ({children}) => {
             <li> <Link to = '/' alt="Home Page">Home</Link></li>
             <li> <Link to = '/Vehicles'>Vehicles</Link></li>
             <li> <Link to='/ContactUs'>Contact Us</Link></li>
-            <li> <Link to='Bookings'>Book Now</Link></li>
+            <li> <Link to='/Bookings'>Book Now</Link></li>
           </ul>
           
           <div className='search-box'>

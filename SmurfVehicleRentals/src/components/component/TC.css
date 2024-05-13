@@ -5,13 +5,15 @@
     height: 100vh;
   }
   .carousel-control-prev, .carousel-control-next {
-    color: black; 
-    background-color: grey;
+    color: grey; 
+    background-color: transparent;
     width: 5%; 
   }
   
   .carousel-control-prev-icon, .carousel-control-next-icon {
-    background-image: none; /* Remove the default background image */
+    background-image: light;
+    color: red;
+     /* Remove the default background image */
   }
   body {
     background-color: white; /* Set the background color of the body to white */

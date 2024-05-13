@@ -1,6 +1,6 @@
 
 import { Button } from "../ui/button"
-
+import { Link } from "react-router-dom";
 export function Services() {
   return (
     <>
@@ -70,11 +70,11 @@ export function Services() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Rental Services</h2>
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <div className="flex flex-col items-start gap-6 rounded-lg border border-blue-500 bg-white p-6 shadow-lg transition-colors hover:bg-gray-700 dark:bg-gray-950 dark:hover:bg-gray-600">
-  <CarIcon className="h-20 w-20 text-blue-500" />
+          <div className="flex flex-col items-center gap-6 rounded-lg border border-blue-500 bg-white p-6 shadow-lg transition-colors hover:bg-gray-700 dark:bg-gray-950 dark:hover:bg-gray-600">
+  <CarIcon className="h-32 w-32 text-blue-500" />
   <div>
-    <h3 className="text-xl font-semibold">Self-Drive</h3>
-    <ul className="mt-2 space-y-1 text-left text-xs text-gray-500 dark:text-gray-400" style={{textAlign: 'left'}}>
+    <h3 className="text-center text-lg font-semibold">Self-Drive</h3>
+    <ul className="mt-2 space-y-1 text-left text-sm text-gray-500 dark:text-gray-400 pl-5 list-disc">
       <li>Rent a car and explore the city</li>
       <li>Flexible schedule and itinerary</li>
       <li>No need for public transportation</li>
@@ -83,61 +83,73 @@ export function Services() {
   </div>
   <div className="w-full flex justify-center">
     <Button size="sm" variant="outline">
-      Learn More
+            
+  <Link to="/Vehicles" className="no-underline text-current">
+        Learn More
+      </Link>
+      </Button>
+  </div>
+</div>
+<div className="flex flex-col items-center gap-6 rounded-lg border border-blue-500 bg-white p-6 shadow-lg transition-colors hover:bg-gray-700 dark:bg-gray-950 dark:hover:bg-gray-600">
+  <MapIcon className="h-32 w-32 text-blue-500" />
+  <div className="flex-grow">
+    <h3 className="text-center text-lg font-semibold">Tours</h3>
+    <ul className="mt-2 space-y-1 text-left text-sm text-gray-500 dark:text-gray-400 pl-5 list-disc">
+      <li>Guided tours of top attractions</li>
+      <li>Learn about the city's history and culture</li>
+      <li>Hassle-free transportation</li>
+      <li>Expert local guides</li>
+    </ul>
+  </div>
+  <div className="w-full flex justify-center">
+  <Button size="sm" variant="outline">
+  <Link to="/Bookings" className="no-underline text-current">
+        Learn More
+      </Link>
     </Button>
   </div>
 </div>
-            <div className="flex flex-col items-start gap-6 rounded-lg border border-blue-500 bg-white p-6 shadow-lg transition-colors hover:bg-gray-700 dark:bg-gray-950 dark:hover:bg-gray-600">
-              <MapIcon className="h-20 w-20 text-blue-500" />
-              <div>
-                <h3 className="text-xl font-semibold">Tours</h3>
-                <ul className="mt-2 space-y-1 text-left text-xs text-gray-500 dark:text-gray-400">
-                  <li>Guided tours of top attractions</li>
-                  <li>Learn about the city's history and culture</li>
-                  <li>Hassle-free transportation</li>
-                  <li>Expert local guides</li>
-                </ul>
-              </div>
-              <div className="w-full flex justify-center">
-                <Button size="sm" variant="outline">
-                  Learn More
-                </Button>
-              </div>
-            </div>
-            <div className="flex flex-col items-start gap-6 rounded-lg border border-blue-500 bg-white p-6 shadow-lg transition-colors hover:bg-gray-700 dark:bg-gray-950 dark:hover:bg-gray-600">
-              <UserIcon className="h-20 w-20 text-blue-500" />
-              <div>
-                <h3 className="text-xl font-semibold">With Driver</h3>
-                <ul className="mt-2 space-y-1 text-left text-xs text-gray-500 dark:text-gray-400">
-                  <li>Relax and enjoy the ride</li>
-                  <li>Professional and experienced drivers</li>
-                  <li>Customized itinerary</li>
-                  <li>Comfortable and safe transportation</li>
-                </ul>
-              </div>
-              <div className="w-full flex justify-center">
-                <Button size="sm" variant="outline">
-                  Learn More
-                </Button>
-              </div>
-            </div>
-            <div className="flex flex-col items-start gap-6 rounded-lg border border-blue-500 bg-white p-6 shadow-lg transition-colors hover:bg-gray-700 dark:bg-gray-950 dark:hover:bg-gray-600">
-              <BriefcaseIcon className="h-20 w-20 text-blue-500" />
-              <div>
-                <h3 className="text-xl font-semibold">Car Leasing</h3>
-                <ul className="mt-2 space-y-1 text-xs text-left text-gray-500 dark:text-gray-400">
-                  <li>Long-term car rental for businesses</li>
-                  <li>Flexible lease terms</li>
-                  <li>Maintenance and insurance included</li>
-                  <li>Cost-effective solution</li>
-                </ul>
-              </div>
-              <div className="w-full flex justify-center">
-                <Button size="sm" variant="outline">
-                  Learn More
-                </Button>
-              </div>
-            </div>
+<div className="flex flex-col items-center gap-6 rounded-lg border border-blue-500 bg-white p-6 shadow-lg transition-colors hover:bg-gray-700 dark:bg-gray-950 dark:hover:bg-gray-600">
+  <UserIcon className="h-32 w-32 text-blue-500" />
+  <div className="flex-grow">
+    <h3 className="text-center text-lg font-semibold">With Driver</h3>
+    <ul className="mt-2 space-y-1 text-left text-sm text-gray-500 dark:text-gray-400 pl-5 list-disc">
+      <li>Relax and enjoy the ride</li>
+      <li>Professional and experienced drivers</li>
+      <li>Customized itinerary</li>
+      <li>Comfortable and safe transportation</li>
+    </ul>
+  </div>
+  <div className="w-full flex justify-center">
+    <Button size="sm" variant="outline">
+    <Link to="/Bookings" className="no-underline text-current">
+        Learn More
+      </Link>
+     
+    </Button>
+  </div>
+</div>
+<div className="flex flex-col items-center gap-6 rounded-lg border border-blue-500 bg-white p-6 shadow-lg transition-colors hover:bg-gray-700 dark:bg-gray-950 dark:hover:bg-gray-600">
+  <BriefcaseIcon className="h-32 w-32 text-blue-500" />
+  <div className="flex-grow">
+    <h3 className="text-center text-lg font-semibold">Car Leasing</h3>
+    <ul className="mt-2 space-y-1 text-left text-sm text-gray-500 dark:text-gray-400 pl-5 list-disc">
+      <li>Long-term car rental for businesses</li>
+      <li>Flexible lease terms</li>
+      <li>Maintenance and insurance included</li>
+      <li>Cost-effective solution</li>
+    </ul>
+  </div>
+  <div className="w-full flex justify-center">
+    
+     <Button size="sm" variant="outline">      
+    <Link to="/Vehicles" className="no-underline text-current">
+        Learn More
+      </Link>
+      </Button>
+
+  </div>
+</div>
           </div>
         </div>
       </section>
