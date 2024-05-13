@@ -1,11 +1,18 @@
 
 import { Link } from "react-router-dom";
+import { logout } from '../../functions/auth';
+
 import { Input } from "../../components/ui/input"
 import { AvatarImage, AvatarFallback, Avatar } from "../../components/ui/avatar"
 import { DropdownMenuTrigger, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuContent, DropdownMenu } from "../../components/ui/dropdown-menu"
 import { UserAuth } from '../../context/AuthContext';
 export function NavigationBar({children}) {
     const {user} = UserAuth();
+    console.log(user);  
+    
+    const handleLogout = () =>{
+        logout();
+    }
   return (
     (<header
       className="flex h-20 w-full shrink-0 items-center px-4 md:px-6 bg-white dark:bg-gray-950 shadow">
@@ -87,8 +94,10 @@ export function NavigationBar({children}) {
               <DropdownMenuSeparator />
               <DropdownMenuItem>
                 <div className="flex items-center gap-2">
+                  <button onClick={handleLogout}>
                   <LogOutIcon className="h-4 w-4" />
                   <span className="text-base">Logout</span>
+                  </button>
                 </div>
               </DropdownMenuItem>
             </DropdownMenuContent>
