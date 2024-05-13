@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { logout } from '../../functions/auth';
 
@@ -22,22 +21,22 @@ export function NavigationBar({children}) {
       </Link>
       <div className="flex-1 flex items-center justify-center gap-4 sm:gap-6">
         <Link
-          className="text-base font-medium text-gray-900 hover:underline underline-offset-4 dark:text-gray-50"
+           className="no-underline text-black"
           to = '/' alt="Home Page">
           Home
         </Link>
         <Link
-          className="text-base font-medium text-gray-900 hover:underline underline-offset-4 dark:text-gray-50"
+           className="no-underline text-black"
           to='/Vehicles'>
           Vehicles
         </Link>
         <Link
-          className="text-base font-medium text-gray-900 hover:underline underline-offset-4 dark:text-gray-50"
+           className="no-underline text-black"
           to='/Blogs'>
           Blogs
         </Link>
         <Link
-          className="text-base font-medium text-gray-900 hover:underline underline-offset-4 dark:text-gray-50"
+           className="no-underline text-black"
           to='/ContactUs'>
           Contact
         </Link>
@@ -52,12 +51,12 @@ export function NavigationBar({children}) {
             className="absolute left-2 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-500 dark:text-gray-400" />
         </form>
         <Link
-          className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-base font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 ml-4"
+          className="no-underline inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-base font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 ml-4"
           to='/Bookings'>
           Book Now
         </Link>
         <Link
-          className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-base font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 ml-4"
+          className="no-underline inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-base font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 ml-4"
           to ='/Login'>
           Login
         </Link>
@@ -80,11 +79,11 @@ export function NavigationBar({children}) {
               <DropdownMenuItem>
                 <div className="flex items-center gap-2">
                   <UserIcon className="h-4 w-4" />
-                  <span className="text-base"> <Link to='/User'>User Dashboard</Link></span>
+                  <span className="text-base"> <Link to='/User' className="text-black no-underline">User Dashboard</Link></span>
                 </div>
               </DropdownMenuItem>
               {user?.role === 'admin' && <DropdownMenuItem>
-                <Link to={'/admin-dashboard'}>
+                <Link to={'/admin-dashboard'} className="no-underline text-black">
                 <div className="flex items-center gap-2">
                   <UsersIcon className="h-4 w-4" />
                   <span className="text-base">Admin Dashboard</span>
@@ -108,7 +107,6 @@ export function NavigationBar({children}) {
     </header>)
   );
 }
-
 function CarIcon(props) {
   return (
     (<svg
