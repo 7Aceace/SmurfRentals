@@ -5,38 +5,46 @@ import { Input } from "../../components/ui/input"
 import { AvatarImage, AvatarFallback, Avatar } from "../../components/ui/avatar"
 import { DropdownMenuTrigger, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuContent, DropdownMenu } from "../../components/ui/dropdown-menu"
 import { UserAuth } from '../../context/AuthContext';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export function NavigationBar({children}) {
     const {user} = UserAuth();
     console.log(user);  
     
     const handleLogout = () =>{
+      try {
         logout();
+        toast.success("You have logged out.");
+      } catch (error) {
+        console.error("Logout failed:", error);
+      }
     }
   return (
     (<header
       className="flex h-20 w-full shrink-0 items-center px-4 md:px-6 bg-white dark:bg-gray-950 shadow">
       <Link className="flex items-center justify-center" to = '/' alt="Home Page">
-        <CarIcon className="h-6 w-6 text-gray-900 dark:text-gray-50" />
+        <img src="/SMURFlogo.png" className="h-40 w-30" alt="Car" />
         <span className="sr-only">Acme Vehicle Rentals</span>
       </Link>
+      <ToastContainer />
       <div className="flex-1 flex items-center justify-center gap-4 sm:gap-6">
         <Link
-           className="no-underline text-black"
+           className="no-underline text-blue-800"
           to = '/' alt="Home Page">
           Home
         </Link>
         <Link
-           className="no-underline text-black"
+           className="no-underline text-blue-800"
           to='/Vehicles'>
           Vehicles
         </Link>
         <Link
-           className="no-underline text-black"
+           className="no-underline text-blue-800"
           to='/Blogs'>
           Blogs
         </Link>
         <Link
-           className="no-underline text-black"
+           className="no-underline text-blue-800"
           to='/ContactUs'>
           Contact
         </Link>
@@ -45,26 +53,26 @@ export function NavigationBar({children}) {
         <form className="flex items-center">
           <Input
             className="h-9 pl-8 pr-4 text-base rounded-md border border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50"
-            placeholder="Search vehicles..."
+            placeholder="  Search vehicles..."
             type="search" />
           <SearchIcon
             className="absolute left-2 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-500 dark:text-gray-400" />
         </form>
         <Link
-          className="no-underline inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-base font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 ml-4"
-          to='/Bookings'>
-          Book Now
-        </Link>
-        <Link
-          className="no-underline inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-base font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 ml-4"
-          to ='/Login'>
-          Login
-        </Link>
+  className="no-underline inline-flex h-9 items-center justify-center rounded-md bg-blue-800 px-4 py-2 text-base font-medium text-gray-50 shadow transition-colors hover:bg-blue-800/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-800 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 ml-4"
+  to='/Bookings'>
+  Book Now
+</Link>
+<Link
+  className="no-underline inline-flex h-9 items-center justify-center rounded-md bg-blue-800 px-4 py-2 text-base font-medium text-gray-50 shadow transition-colors hover:bg-blue-800/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-800 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 ml-4"
+  to ='/Login'>
+  Login
+</Link>
         <div className="relative ml-4 flex items-center gap-4">
-          <Link className="flex items-center" href="#">
-            <ShoppingCartIcon className="h-6 w-6 text-gray-500 dark:text-gray-400" />
-            <span className="sr-only">Cart</span>
-          </Link>
+        <Link className="flex items-center" href="#">
+          <img src="/CarKeyLogo.png" className="h-10 w-10" alt="Shopping Cart" />
+          <span className="sr-only">Cart</span>
+        </Link>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <div className="flex items-center gap-2 cursor-pointer">

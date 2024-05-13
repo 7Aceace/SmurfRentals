@@ -61,7 +61,7 @@ export function LoginSignUp() {
           alt="Login"
           className="aspect-[5/6] object-cover"
           height={600}
-          src="/placeholder.svg"
+          src="/FamilyPhoto.png"
           width={500} />
       </div>
       <div className="space-y-6 flex flex-col justify-center">
