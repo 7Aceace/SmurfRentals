@@ -11,12 +11,14 @@ import FooterN from '../components/FooterN';
 import Contact from '../pages/Contact'
 import  FAQv  from '../pages/FAQV'
 import  Blogs  from '../pages/BlogsPage'
+
 export default function UserRoutes() {
   return (
     <>
-   
+    
       <div className='container'>
       <h1>LOGGEDIN</h1>
+      
       <Navbar/>
       
 
