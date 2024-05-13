@@ -2,7 +2,7 @@ import { Libre_Franklin } from 'next/font/google'
 import './stylesview.css'
 import React from 'react';
 
-const MyComponent = () => {
+const layoutview = () => {
     const libre_franklin = Libre_Franklin({
         subsets: ['latin'],
         display: 'swap',

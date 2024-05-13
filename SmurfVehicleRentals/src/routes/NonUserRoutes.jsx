@@ -10,11 +10,18 @@ import { NavigationBar } from '../components/component/navigation-bar'
 export default function NonUserRoutes() {
   return (
     <>
+<<<<<<< HEAD
     <NavigationBar/>
     <div className='container'>
 
     
+=======
+    <div className='container'> 
+    <Navbar/>
+>>>>>>> 1d922b656e1b670cb808d5994bc3887d2fe776c4
     </div>
+   
+    
     <Routes>
     <Route path='/' element={<Home />} />
     <Route path='/login' element={<Login />} />

@@ -11,7 +11,12 @@ import FooterN from '../components/FooterN';
 import Contact from '../pages/Contact'
 import  FAQv  from '../pages/FAQV'
 import  Blogs  from '../pages/BlogsPage'
+<<<<<<< HEAD
 
+=======
+import Bookings from '../pages/Bookings'
+import TermsandConditions from '../components/component/TermsandConditions'
+>>>>>>> 1d922b656e1b670cb808d5994bc3887d2fe776c4
 export default function UserRoutes() {
   return (
     <>
@@ -27,6 +32,7 @@ export default function UserRoutes() {
     <Routes>
     <Route path='/' element = {<Home/>}/>
     <Route path='/Vehicles' element = {<Listings/>}/>
+    <Route path='/Bookings' element ={<Bookings/>}/>
     <Route path='ContactUs' element={<Contact/>}/>
     <Route path='/login' element = {<Login/>}/>
     <Route path='/*' element = {<Home/>}/>
@@ -35,6 +41,7 @@ export default function UserRoutes() {
     <Route path='admin-dashboard' element={<AdminDashboard/>}/>
     <Route path='/FAQ' element={<FAQv/>}/>
     <Route path='/Blogs' element={<Blogs/>}/>
+    <Route path='/TermsandConditions' element={<TermsandConditions/>}/>
     </Routes>
    
     </>

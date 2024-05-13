@@ -260,8 +260,9 @@ const AppVehicleRentals = (props) => {
         )}
       </div>
     
-          <FooterN/>
+      <FooterN/>
     </div>
+    
     );
 };
 

@@ -9,6 +9,7 @@ import '../components/Navbar/Navbar.css';
 import AppHero from '../components/hero';
 import LoginCard from '../components/LoginCard';
 import FooterN from '../components/FooterN';
+import { Services } from '../components/component/services';
 const Home = () => {
  return (
     <>
@@ -16,7 +17,7 @@ const Home = () => {
     <main>
         <AppHero/>
     </main>
-    <Feature /> 
+    <Services/>
     <div className='cardcontainer'> 
         <Cards/>
     </div>
