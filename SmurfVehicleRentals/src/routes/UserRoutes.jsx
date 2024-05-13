@@ -13,6 +13,8 @@ import  FAQv  from '../pages/FAQV'
 import  Blogs  from '../pages/BlogsPage'
 import Bookings from '../pages/Bookings'
 import TermsandConditions from '../components/component/TermsandConditions'
+import { Blogs2 } from '../components/component/Blogs2'
+import { Blogs3 } from '../components/component/Blogs3'
 export default function UserRoutes() {
   return (
     <>
@@ -37,6 +39,9 @@ export default function UserRoutes() {
     <Route path='/FAQ' element={<FAQv/>}/>
     <Route path='/Blogs' element={<Blogs/>}/>
     <Route path='/TermsandConditions' element={<TermsandConditions/>}/>
+    <Route path='/TouristSpot:Cambugahay' element={<Blogs/>}/>
+    <Route path='/TravelHacks' element={<Blogs2/>}/>
+    <Route path='/Guide' element={<Blogs3/>}/>
     </Routes>
    
     </>

@@ -253,10 +253,9 @@ export function BookNow() {
               </CardHeader>
               <CardContent className="p-4 flex flex-col justify-between">
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold">The Future of Autonomous Vehicles</h3>
+                  <h3 className="text-xl font-bold">Tourist Spots Itinerary in Siquijor</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Exploring the latest advancements in self-driving car technology and their impact on the
-                    transportation industry.
+                  Embark on a comprehensive journey through Siquijor, a stunning island in the Philippines, as you uncover the hidden gems and experience the enchanting beauty it has to offer. From its pristine beaches with crystal-clear waters to its lush mountains and captivating waterfalls, Siquijor will leave you in awe of its natural wonders. Immerse yourself in the rich local culture, indulge in delicious traditional cuisine, and create memories that will last a lifetime in this comprehensive guide to exploring the unparalleled beauty of Siquijor.
                   </p>
                 </div>
                 <div className="flex items-center justify-between mt-4">
@@ -266,11 +265,11 @@ export function BookNow() {
                       <AvatarFallback>JD</AvatarFallback>
                     </Avatar>
                     <div>
-                      <div className="font-medium">John Doe</div>
-                      <div className="text-xs text-gray-500 dark:text-gray-400">May 11, 2024</div>
+                      <div className="font-medium">Chuche Montenegro</div>
+                      <div className="text-xs text-gray-500 dark:text-gray-400">May 04, 2024</div>
                     </div>
                   </div>
-                  <Link className="text-primary hover:underline" href="#">
+                  <Link to='/TouristSpot:Cambugahay'>
                     Read more
                   </Link>
                 </div>
@@ -292,10 +291,9 @@ export function BookNow() {
               </CardHeader>
               <CardContent className="p-4 flex flex-col justify-between">
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold">The Rise of Electric Vehicles</h3>
+                  <h3 className="text-xl font-bold">Ultimate guide to renting cars in Siquijor The Rise of Electric Vehicles</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Examining the growing popularity of electric vehicles and their impact on the environment and the
-                    automotive industry.
+                  Embarking on a journey to the mystical island of Siquijor in the Philippines promises an adventure filled with enchanting landscapes and cultural landmarks. To ensure a seamless experience, renting a car can be the ultimate way to explore the island's beauty at your own pace. 
                   </p>
                 </div>
                 <div className="flex items-center justify-between mt-4">
@@ -305,11 +303,11 @@ export function BookNow() {
                       <AvatarFallback>JD</AvatarFallback>
                     </Avatar>
                     <div>
-                      <div className="font-medium">Jane Doe</div>
-                      <div className="text-xs text-gray-500 dark:text-gray-400">May 11, 2024</div>
+                      <div className="font-medium">Chuche Montenegro</div>
+                      <div className="text-xs text-gray-500 dark:text-gray-400">May 10, 2024</div>
                     </div>
                   </div>
-                  <Link className="text-primary hover:underline" href="#">
+                  <Link to='/TravelHacks'>
                     Read more
                   </Link>
                 </div>
@@ -331,10 +329,10 @@ export function BookNow() {
               </CardHeader>
               <CardContent className="p-4 flex flex-col justify-between">
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold">The Future of Mobility</h3>
+                  <h3 className="text-xl font-bold">Crucial Steps to Take After a Vehicle Accident in the Philippines: Your Comprehensive Guide</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Exploring the latest trends and innovations in the transportation industry, from ride-sharing to
-                    micromobility.
+                  Being involved in a vehicle accident can be a stressful and unsettling experience. Whether it’s a minor fender-bender or a more serious collision, knowing what steps to take afterward is crucial. Especially in the Philippines, where road conditions and traffic can pose challenges, being prepared for such situations is essential.
+
                   </p>
                 </div>
                 <div className="flex items-center justify-between mt-4">
@@ -348,7 +346,7 @@ export function BookNow() {
                       <div className="text-xs text-gray-500 dark:text-gray-400">May 11, 2024</div>
                     </div>
                   </div>
-                  <Link className="text-primary hover:underline" href="#">
+                  <Link to='/Guide'>
                     Read more
                   </Link>
                 </div>

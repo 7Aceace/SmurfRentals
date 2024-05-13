@@ -2,19 +2,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import '../../index.css'
-export function Blogs() {
+export function Blogs2() {
   return (<>
     <section className="w-full bg-gray-100 dark:bg-gray-800 py-12 md:py-20 lg:py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <div className="space-y-4">
-            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Tourist Spots Itinerary in Siquijor: Comprehensive guide to explore the beauty of Siquijor
+            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            Ultimate guide to renting cars in Siquijor 
             </h1>
             <div className="flex items-center space-x-4 text-gray-500 dark:text-gray-400">
               <div>
                 <span className="font-medium">Chuche Montenegro</span>,Writer{"\n                          "}
               </div>
-              <div className="text-sm">Posted on May 05, 2024</div>
+              <div className="text-sm">Posted on May 10, 2024</div>
             </div>
           </div>
         </div>
@@ -24,18 +25,19 @@ export function Blogs() {
       className="container mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-20 lg:py-24 grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-12">
       <article className="prose prose-gray dark:prose-invert">
         <p>
-        Siquijor, an island province in the Philippines, is a treasure trove of natural beauty and cultural heritage. When planning an itinerary to explore this enchanting destination, a visit to Paliton Beach is a must.
-        Recognized as the best beach on the island, its serene ambiance and crystal-clear waters make it a perfect spot for relaxation and swimming. For those seeking adventure, the cliff diving experience at Salagdoong Beach is not to be missed. To witness the island's natural wonders, include a refreshing stop at Cambugahay Falls, a multi-tiered waterfall that is both enchanting and accessible, offering visitors the chance to swim in its cool, turquoise pools. For a glimpse into the underwater world, the Tulapos Marine Sanctuary provides an excellent diving experience with its vibrant marine life. To complete your day, a visit to the historical Lazi Church and Convent will immerse you in the island's rich religious heritage.
-
+        Embarking on a journey to the mystical island of Siquijor in the Philippines promises an adventure filled with enchanting landscapes and cultural landmarks. To ensure a seamless experience, renting a car can be the ultimate way to explore the island's beauty at your own pace. Whether you're traveling solo, as a couple, or in a group, there's a vehicle to suit your needs. For those in larger parties, van rentals offer a comfortable and convenient way to travel together, fostering shared experiences as you navigate the island 1. Meanwhile, thrill-seekers might prefer the exhilaration of a motorbike, allowing for an immersive journey through Siquijor's scenic routes . With rental services, you gain the flexibility, comfort, and freedom to craft your own itinerary, from the white sands of Paliton Beach to the historic Lazi Church and Convent .
         </p>
         <blockquote>
-          “Beauty of Nature is indeed here.”
+          <h3>
+          “Enjoy the Island guilt free!”
+          </h3>
+        
         </blockquote>
        
-        <p>Siquijor's charm extends beyond its natural attractions. The island's laid-back vibe is perfect for those looking to unwind and embrace a slower pace of life. When visiting, it's important to plan your trip between November and May to enjoy the dry season, making exploration more comfortable. Getting around the island is easy, with various transportation options available, and a range of accommodations catering to different budgets and preferences. Remember to bring </p>
-        
+        <p>When planning your car rental in Siquijor, it's essential to consider several factors to ensure a hassle-free experience. First, choose the right vehicle based on your group size, budget, and the terrain you plan to explore . Rental companies on the island offer well-maintained cars, often with convenient features like automatic transmission and air conditioning for a comfortable drive . It's important to comply with local travel restrictions and regulations, provide accurate booking information, and understand the terms and conditions to avoid hidden costs . Additionally, road safety is paramount, so familiarize yourself with local driving regulations . Keep in mind that there is a minimum age requirement for renting vehicles in Siquijor, typically 21 years old, to ensure safe driving practices . With a variety of transportation options available, from budget-friendly scooters to comfortable vans, travelers can easily explore the enchanting island and all it has to offer.
+        </p>
         <p>
-        Remember to bring enough cash, as the island is small and ATMs may be scarce. Respect local customs by dressing appropriately, especially when visiting religious sites. Lastly, don't forget to pack essentials like sunscreen and insect repellent to protect yourself in the tropical climate. By planning a balanced itinerary that includes beach time, cultural visits, and natural attractions, you can fully experience the beauty and tranquility of Siquijor.
+        Remember, the best time to visit Siquijor is during the dry season from November to April, when the weather is most conducive for travel and exploration . With the right vehicle, you can discover the island's hidden gems, from the cascading Cambugahay Falls to the serene Paliton Beach, at your leisure. So, gear up for an unforgettable journey and take the wheel to uncover the magic of Siquijor.
 
 
         </p>

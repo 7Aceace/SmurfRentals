@@ -18,9 +18,7 @@ const Home = () => {
         <AppHero/>
     </main>
     <Services/>
-    <div className='cardcontainer'> 
-        <Cards/>
-    </div>
+    
     <FooterN/>
     </>
     );
