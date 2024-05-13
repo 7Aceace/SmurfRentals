@@ -77,10 +77,12 @@ export function NavigationBar({children}) {
                 </div>
               </DropdownMenuItem>
               {user?.role === 'admin' && <DropdownMenuItem>
+                <Link to={'/admin-dashboard'}>
                 <div className="flex items-center gap-2">
                   <UsersIcon className="h-4 w-4" />
                   <span className="text-base">Admin Dashboard</span>
                 </div>
+                </Link>
               </DropdownMenuItem>}
               <DropdownMenuSeparator />
               <DropdownMenuItem>
