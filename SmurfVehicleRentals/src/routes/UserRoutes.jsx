@@ -11,17 +11,12 @@ import FooterN from '../components/FooterN';
 import Contact from '../pages/Contact'
 import  FAQv  from '../pages/FAQV'
 import  Blogs  from '../pages/BlogsPage'
-<<<<<<< HEAD
 
-=======
 import Bookings from '../pages/Bookings'
 import TermsandConditions from '../components/component/TermsandConditions'
-<<<<<<< HEAD
 import { Blogs2 } from '../components/component/Blogs2'
 import { Blogs3 } from '../components/component/Blogs3'
-=======
->>>>>>> 1d922b656e1b670cb808d5994bc3887d2fe776c4
->>>>>>> e9510d802e39fc816813e7bfc24b9111641a2d2d
+
 export default function UserRoutes() {
   return (
     <>
