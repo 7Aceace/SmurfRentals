@@ -6,46 +6,16 @@ import { TabsTrigger, TabsList, TabsContent, Tabs } from "../../components/ui/ta
 import { CardTitle, CardHeader, CardContent, CardFooter, Card, CardDescription } from "../../components/ui/card"
 import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "../../components/ui/table"
 import { Label } from "../../components/ui/label"
+import { UserAuth } from '../../context/AuthContext';
 import '../../index.css'
 export function UserDashboardJS() {
+  const {user} = UserAuth();
   return (
 
     (
     <div className="w-full bg-white py-12 md:py-24 lg:py-32">
-    
+     <h1 className="font-bold text-center">Welcome {user?.firstName}</h1>
     <div className="flex flex-col min-h-screen w-full">
-      <header
-        className="flex h-14 items-center gap-4 border-   b bg-gray-100/40 px-6 dark:bg-gray-800/40 lg:h-[60px]">
-        
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button
-              className="rounded-full border border-gray-200 w-8 h-8 dark:border-gray-800"
-              size="icon"
-              variant="ghost">
-              <img
-                alt="Avatar"
-                className="rounded-full"
-                height="32"
-                src="/placeholder.svg"
-                style={{
-                  aspectRatio: "32/32",
-                  objectFit: "cover",
-                }}
-                width="32" />
-              <span className="sr-only">Toggle user menu</span>
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuLabel>My Account</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>Settings</DropdownMenuItem>
-            <DropdownMenuItem>Support</DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>Logout</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      </header>
       <main className="flex-1 gap-4 p-4 md:gap-8 md:p-6">
         <Tabs className="w-full" defaultValue="rentals">
           <TabsList className="grid grid-cols-2 border-b">

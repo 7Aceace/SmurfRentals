@@ -9,9 +9,6 @@ const UserDashboard = () => {
   
  return ( 
     <>
-    <div>Welcome {user?.firstName}</div>
-  
-    
     <UserDashboardJS/>
     <FooterN/>
     </>
