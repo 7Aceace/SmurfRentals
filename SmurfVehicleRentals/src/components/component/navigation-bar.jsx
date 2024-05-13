@@ -69,7 +69,7 @@ export function NavigationBar({children}) {
   Login
 </Link>
         <div className="relative ml-4 flex items-center gap-4">
-        <Link className="flex items-center" href="#">
+        <Link className="flex items-center" to='/Rentals'>
           <img src="/CarKeyLogo.png" className="h-10 w-10" alt="Shopping Cart" />
           <span className="sr-only">Cart</span>
         </Link>
