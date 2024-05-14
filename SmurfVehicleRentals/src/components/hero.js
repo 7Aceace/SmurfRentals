@@ -38,12 +38,7 @@ function hero() {
             
                 <Carousel.Item key={hero.id}>
                 <img className='d-block w-100' src={hero.image} alt={"Slide " + hero.id}/>
-                <Carousel.Caption style={{
-                  background: 'rgba(255, 255, 255, 0.1)',
-                  backdropFilter: 'blur(5px)',
-                  borderRadius: '10px',
-                  padding: '10px'
-                }}>
+                <Carousel.Caption>
                   <h3>{hero.title}</h3>
                   <p>{hero.description}</p>
                   <a className='btn btn-primary' href={hero.link}>

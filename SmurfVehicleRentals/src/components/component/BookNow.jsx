@@ -13,6 +13,7 @@ import { AvatarImage, AvatarFallback, Avatar } from "../../components/ui/avatar"
 import { Link } from "react-router-dom" 
 import  Map  from "../Map"
 import '../../index.css'
+import FooterN from "../../components/FooterN"
 
 export function BookNow() {
   
@@ -210,7 +211,7 @@ const [endDate, setEndDate] = useState(new Date());
                     alt="Luxury Sedan"
                     className="rounded-md"
                     height={225}
-                    src="/placeholder.svg"
+                    src="/RentalBlog.png"
                     style={{
                       aspectRatio: "300/225",
                       objectFit: "cover",
@@ -277,7 +278,7 @@ const [endDate, setEndDate] = useState(new Date());
                   alt="Blog Post Image"
                   className="rounded-t-lg object-cover w-full"
                   height={300}
-                  src="/placeholder.svg"
+                  src="/ConventBlog.png"
                   style={{
                     aspectRatio: "600/300",
                     objectFit: "cover",
@@ -315,7 +316,7 @@ const [endDate, setEndDate] = useState(new Date());
                   alt="Blog Post Image"
                   className="rounded-t-lg object-cover w-full"
                   height={300}
-                  src="/placeholder.svg"
+                  src="/CambugahayBlog.png"
                   style={{
                     aspectRatio: "600/300",
                     objectFit: "cover",
@@ -353,7 +354,7 @@ const [endDate, setEndDate] = useState(new Date());
                   alt="Blog Post Image"
                   className="rounded-t-lg object-cover w-full"
                   height={300}
-                  src="/placeholder.svg"
+                  src="/RentalBlog.png"
                   style={{
                     aspectRatio: "600/300",
                     objectFit: "cover",
@@ -389,6 +390,7 @@ const [endDate, setEndDate] = useState(new Date());
           </div>
         </div>
       </div>
+      <FooterN/>
     </>
   );
 }

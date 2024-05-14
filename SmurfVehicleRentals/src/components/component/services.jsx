@@ -58,7 +58,7 @@ export function Services() {
     style={{
         objectFit: "cover",
     }}
-    src="/CCS8_Video.mp4"
+    src="/SMURF_Advertisement.mp4"
     autoPlay
     loop
     muted
@@ -88,7 +88,7 @@ export function Services() {
   <div className="w-full flex justify-center">
     <Button size="sm" variant="outline">
             
-  <Link to="/Vehicles" className="no-underline text-current">
+  <Link to="/Bookings" className="no-underline text-current">
         Learn More
       </Link>
       </Button>

@@ -26,7 +26,7 @@ const MyComponent = () => {
           </ul>
           <ul className="text-gray-700 list-none p-0 font-thin flex flex-col text-left w-full">
             <li className="inline-block py-2 px-3 text-white uppercase font-medium tracking-wide">Company</li>
-            <li><a href="#" className="inline-block py-2 pl-3 pr-5 text-gray-500 hover:text-white no-underline">Privacy</a></li>
+            <li><a href="https://drive.google.com/file/d/1_05qBO3qkb55JmZvsS1WY6oLhWHTGwiv/view?usp=drive_link" className="inline-block py-2 pl-3 pr-5 text-gray-500 hover:text-white no-underline">Privacy</a></li>
             <li className="inline-block py-2 pl-3 pr-5 text-gray-500 hover:text-white no-underline">
               <Link to='/TermsandConditions' className='no-underline text-gray-500 hover:text-white'>Terms and Conditions</Link>
               </li>
