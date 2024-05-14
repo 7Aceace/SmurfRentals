@@ -52,7 +52,7 @@ export function Blogs2() {
                   alt="Blog post thumbnail"
                   className="rounded-md"
                   height={60}
-                  src="/placeholder.svg"
+                  src="/CambugahayBlog.png"
                   style={{
                     aspectRatio: "80/60",
                     objectFit: "cover",
@@ -61,7 +61,7 @@ export function Blogs2() {
               </div>
               <div>
                 <h4 className="text-base font-medium">
-                  <Link to='/TouristSpot:Cambugahay'>
+                  <Link to='/TouristSpot:Cambugahay' className="no-underline text-blue-500">
                   Tourist Spots Itinerary in Siquijor
                   </Link>
                 </h4>
@@ -76,7 +76,7 @@ export function Blogs2() {
                   alt="Blog post thumbnail"
                   className="rounded-md"
                   height={60}
-                  src="/placeholder.svg"
+                  src="/ConventBlog.png"
                   style={{
                     aspectRatio: "80/60",
                     objectFit: "cover",
@@ -85,7 +85,7 @@ export function Blogs2() {
               </div>
               <div>
                 <h4 className="text-base font-medium">
-                  <Link to='/TravelHacks'>
+                  <Link to='/TravelHacks' className="no-underline text-blue-500">
                   Ultimate guide to renting cars in Siquijor 
                   </Link>
                 </h4>
@@ -100,7 +100,7 @@ export function Blogs2() {
                   alt="Blog post thumbnail"
                   className="rounded-md"
                   height={60}
-                  src="/placeholder.svg"
+                  src="/RentalBlog.png"
                   style={{
                     aspectRatio: "80/60",
                     objectFit: "cover",
@@ -109,7 +109,7 @@ export function Blogs2() {
               </div>
               <div>
                 <h4 className="text-base font-medium">
-                  <Link to='/Guide'>
+                  <Link to='/Guide' className="no-underline text-blue-500"  >
                   Crucial Steps to Take After a Vehicle Accident in the Philippines: Your Comprehensive Guide
                   </Link>
                 </h4>

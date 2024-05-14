@@ -4,7 +4,7 @@ import ProductManagement from '../components/component/ProductManagement';
 import FooterN from '../components/FooterN';
 const MyComponent = () => {
  return (
-    <div> ADMIN DASHBOARD 
+    <div> 
         <ProductManagement/>
         <FooterN/>
     </div>

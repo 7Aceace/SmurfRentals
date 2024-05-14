@@ -89,9 +89,9 @@ export function ContactUs() {
             </Select>
           </div>
         </CardContent>
-        <CardFooter>
-          <Button type="submit">Submit</Button>
-        </CardFooter>
+        <CardFooter className="flex justify-end">
+  <Button type="submit">Submit</Button>
+</CardFooter>
       </Card>
     </form>
       </div>
@@ -109,7 +109,7 @@ export function ContactUs() {
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 py-12 sm:grid-cols-2 md:grid-cols-3 lg:gap-12">
           <Card className="flex flex-col items-center justify-center space-y-4">
             <img
-              alt="John Doe"
+              alt="Mark Gelson Panganoron"
               className="h-36 w-36 rounded-full object-cover"
               height={150}
               src="/PANGANORON.png"
@@ -120,17 +120,16 @@ export function ContactUs() {
               width={150}
             />
             <div className="space-y-1 text-center">
-              <h3 className="text-lg font-semibold">John Doe</h3>
-              <p className="text-gray-500 dark:text-gray-400">CEO</p>
+              <h3 className="text-lg font-semibold">Mark Gelson Panganoron</h3>
+              <p className="text-gray-500 dark:text-gray-400">Dev</p>
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                John is the visionary behind our company, leading the team with his strategic expertise and innovative
-                mindset.
+              Mark brings over a decade of experience in project management, ensuring our projects run smoothly and efficiently from concept to completion.
               </p>
             </div>
           </Card>
           <Card className="flex flex-col items-center justify-center space-y-4">
             <img
-              alt="Jane Smith"
+              alt="Chuche Montenegro"
               className="h-36 w-36 rounded-full object-cover"
               height={150}
               src="/MONTENEGRO.jpg"
@@ -141,8 +140,8 @@ export function ContactUs() {
               width={150}
             />
             <div className="space-y-1 text-center">
-              <h3 className="text-lg font-semibold">Jane Smith</h3>
-              <p className="text-gray-500 dark:text-gray-400">CTO</p>
+              <h3 className="text-lg font-semibold">Chuche Montenegro</h3>
+              <p className="text-gray-500 dark:text-gray-400">Dev</p>
               <p className="text-sm text-gray-500 dark:text-gray-400">
                 Jane is our technical mastermind, driving innovation and ensuring the seamless execution of our
                 projects.
@@ -151,10 +150,10 @@ export function ContactUs() {
           </Card>
           <Card className="flex flex-col items-center justify-center space-y-4">
             <img
-              alt="Michael Johnson"
+              alt="Ace Monte"
               className="h-36 w-36 rounded-full object-cover"
               height={150}
-              src="/placeholder.svg"
+              src="/ace.jpg"
               style={{
                 aspectRatio: "150/150",
                 objectFit: "cover",
@@ -162,7 +161,7 @@ export function ContactUs() {
               width={150}
             />
             <div className="space-y-1 text-center">
-              <h3 className="text-lg font-semibold">Michael Johnson</h3>
+              <h3 className="text-lg font-semibold">Ace Monte</h3>
               <p className="text-gray-500 dark:text-gray-400">COO</p>
               <p className="text-sm text-gray-500 dark:text-gray-400">
                 Michael is our operations mastermind, ensuring the smooth functioning of our organization and driving

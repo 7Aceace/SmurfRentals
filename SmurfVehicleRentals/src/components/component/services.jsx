@@ -49,19 +49,23 @@ export function Services() {
               </div>
             </div>
           </div>
-          <div className="relative">
-            <img
-              alt="Rental Services"
-              className="rounded-lg"
-              height="400"
-              src="/placeholder.svg"
-              style={{
-                aspectRatio: "550/400",
-                objectFit: "cover",
-              }}
-              width="550"
-            />
-          </div>
+          <div className="flex items-center">
+  <video
+    controls
+    className="rounded-lg"
+    height="500"
+    width="650"
+    style={{
+        objectFit: "cover",
+    }}
+    src="/CCS8_Video.mp4"
+    autoPlay
+    loop
+    muted
+  >
+    Your browser does not support the video tag.
+  </video>
+</div>
         </div>
       </section>
       <section className="w-full py-12 md:py-24 lg:py-32 bg-white">

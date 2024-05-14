@@ -176,7 +176,8 @@ const AppVehicleRentals = (props) => {
             </div>
             <Button
               style={{
-                backgroundColor: "#004AAD",
+                backgroundColor: "#368ce7",
+                color: "#deecfb",
               }}
               variant="primary"
             >

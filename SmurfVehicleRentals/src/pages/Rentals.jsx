@@ -209,8 +209,8 @@ useEffect(() => {
 }, []);
 
     return (
-        <div>
-            <p>Rentals of {user?.firstName}</p>
+        <div className='bg-white'>
+            <h1 className="font-bold text-center">Rentals of {user?.firstName}</h1>
             {rentedVehicles.length > 0 && (
               <div>
                <RentedVehicles rentedVehicles={rentedVehicles}
@@ -291,7 +291,7 @@ useEffect(() => {
 
             {rentedVehicles.length < 1 && (
                        
-                       <p>None</p>
+                       <p className="font-bold text-center">No Rentals</p>
             )}
             {rentedVehicles.length >0}
             {

@@ -78,7 +78,7 @@ export function NavigationBar({children}) {
               <div className="flex items-center gap-2 cursor-pointer">
                 <Avatar className="h-8 w-8">
                   <AvatarImage alt="User Avatar" src="/placeholder-avatar.jpg" />
-                  <AvatarFallback>JP</AvatarFallback>
+                  <AvatarFallback>U</AvatarFallback>
                 </Avatar>
                 <ChevronDownIcon className="h-4 w-4 text-gray-500 dark:text-gray-400" />
               </div>

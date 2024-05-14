@@ -6,10 +6,12 @@ import { Label } from "../../components/ui/label"
 import { Textarea } from "../../components/ui/textarea"
 import { SelectValue, SelectTrigger, SelectItem, SelectContent, Select } from "../../components/ui/select"
 import { CardContent, Card } from "../../components/ui/card"
-
+import { UserAuth } from '../../context/AuthContext';
 export function AdminDashboard() {
+  const {user} = UserAuth();
   return (
     (<div className="flex flex-col max-w-2xl mx-auto">
+      <h1 className="font-bold text-center">ADMIN DASHBOARD OF {user?.firstName}</h1>
       <header
         className="flex h-14 items-center gap-4 border-b bg-[#f0f9ff] px-6 dark:bg-[#0b1521]">
         <div className="flex-1">
@@ -24,34 +26,7 @@ export function AdminDashboard() {
             </div>
           </form>
         </div>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button
-              className="rounded-full border border-[#e2e8f0] w-8 h-8 dark:border-[#1e293b]"
-              size="icon"
-              variant="ghost">
-              <img
-                alt="Avatar"
-                className="rounded-full"
-                height="32"
-                src="/placeholder.svg"
-                style={{
-                  aspectRatio: "32/32",
-                  objectFit: "cover",
-                }}
-                width="32" />
-              <span className="sr-only">Toggle user menu</span>
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuLabel>My Account</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>Settings</DropdownMenuItem>
-            <DropdownMenuItem>Support</DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>Logout</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        
       </header>
       <main className="flex flex-1 flex-col gap-4 p-4">
         <div className="flex items-center justify-between">
@@ -119,7 +94,7 @@ export function AdminDashboard() {
                 </SelectContent>
               </Select>
             </div>
-            <Button className="w-full" size="lg">
+            <Button className="self-end" size="lg">
               Add Product
             </Button>
           </CardContent>
