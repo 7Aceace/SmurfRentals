@@ -1,9 +1,11 @@
 
 import { CollapsibleTrigger, CollapsibleContent, Collapsible } from "../../components/ui/collapsible"
-
+import FooterN from "../../components/FooterN"
 export function FAQ() {
   return (
-    (<section className="bg-white py-12 md:py-16 lg:py-20">
+    (
+    <>
+    <section className="bg-white py-12 md:py-16 lg:py-20">
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-3xl space-y-6 text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Frequently Asked Questions</h2>
@@ -59,7 +61,9 @@ export function FAQ() {
           </div>
         </div>
       </div>
-    </section>)
+    </section>
+    <FooterN/>
+    </>)
   );
 }
 

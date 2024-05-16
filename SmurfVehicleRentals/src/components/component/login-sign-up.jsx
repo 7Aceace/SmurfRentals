@@ -79,14 +79,14 @@ export function LoginSignUp() {
               <CardContent className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" placeholder="name@example.com" type="email"  
+                  <Input id="email" type="email"  placeholder="Email"
                     onChange = {(e) =>{
                     setEmail(e.target.value);
                     }} />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="password">Password</Label>
-                  <Input id="password" placeholder="********" type="password"  
+                  <Input id="password"  type="password"  placeholder="Password"
                     onChange = {(e) =>{
                       setPassword(e.target.value);
                     }} />
@@ -115,7 +115,7 @@ export function LoginSignUp() {
                   <div className="space-y-2">
                     <Label htmlFor="first-name">First Name</Label>
                     <p>{firstName}</p>
-                    <Input type="text" id="first-name" placeholder="John" 
+                    <Input type="text" id="first-name" placeholder="First Name"
                     onChange = {(e) =>{
                       setFirstName(e.target.value);
                     }} 
@@ -123,7 +123,7 @@ export function LoginSignUp() {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="last-name">Last Name</Label>
-                    <Input type="text" id="last-name" placeholder="Doe"  
+                    <Input type="text" id="last-name" placeholder="Last Name"
                     onChange = {(e) =>{
                       setLastName(e.target.value);
                     }} />
@@ -131,21 +131,21 @@ export function LoginSignUp() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" placeholder="name@example.com" type="email"  
+                  <Input id="email" placeholder='Email' type="email"  
                     onChange = {(e) =>{
                     setEmail(e.target.value);
                     }} />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="password">Password</Label>
-                  <Input id="password" placeholder="********" type="password"  
+                  <Input id="password" placeholder="Password" type="password"  
                     onChange = {(e) =>{
                       setPassword(e.target.value);
                     }} />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="confirm-password">Confirm Password</Label>
-                  <Input id="confirm-password" placeholder="********" type="password"  
+                  <Input id="confirm-password" type="password"   placeholder="Confirm Password"
                     onChange = {(e) =>{
                       setConfirmPassword(e.target.value);
                     }} />

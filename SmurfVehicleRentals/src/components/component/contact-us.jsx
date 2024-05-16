@@ -162,7 +162,7 @@ export function ContactUs() {
             />
             <div className="space-y-1 text-center">
               <h3 className="text-lg font-semibold">Ace Monte</h3>
-              <p className="text-gray-500 dark:text-gray-400">COO</p>
+              <p className="text-gray-500 dark:text-gray-400">Dev</p>
               <p className="text-sm text-gray-500 dark:text-gray-400">
                 Michael is our operations mastermind, ensuring the smooth functioning of our organization and driving
                 efficiency.

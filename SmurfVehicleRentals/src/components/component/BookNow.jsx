@@ -211,7 +211,7 @@ const [endDate, setEndDate] = useState(new Date());
                     alt="Luxury Sedan"
                     className="rounded-md"
                     height={225}
-                    src="/RentalBlog.png"
+                    src="/carmustang1.png"
                     style={{
                       aspectRatio: "300/225",
                       objectFit: "cover",
@@ -232,7 +232,7 @@ const [endDate, setEndDate] = useState(new Date());
                     alt="Rugged SUV"
                     className="rounded-md"
                     height={225}
-                    src="/placeholder.svg"
+                    src="/SuzukiJimny.png"
                     style={{
                       aspectRatio: "300/225",
                       objectFit: "cover",
@@ -253,7 +253,7 @@ const [endDate, setEndDate] = useState(new Date());
                     alt="Compact Hatchback"
                     className="rounded-md"
                     height={225}
-                    src="/placeholder.svg"
+                    src="/ToyotaFortuner.png"
                     style={{
                       aspectRatio: "300/225",
                       objectFit: "cover",

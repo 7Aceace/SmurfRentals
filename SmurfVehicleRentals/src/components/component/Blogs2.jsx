@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import  FooterN from "../FooterN";
 import '../../index.css'
 export function Blogs2() {
   return (<>
@@ -121,6 +122,8 @@ export function Blogs2() {
           </div>
         </div>
       </div>
+    
     </div>
+    <FooterN/>
   </>);
 }
