@@ -143,7 +143,7 @@ export function ContactUs() {
               <h3 className="text-lg font-semibold">Chuche Montenegro</h3>
               <p className="text-gray-500 dark:text-gray-400">Dev</p>
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                Jane is our technical mastermind, driving innovation and ensuring the seamless execution of our
+                Chuche is our technical mastermind, driving innovation and ensuring the seamless execution of our
                 projects.
               </p>
             </div>
@@ -164,7 +164,7 @@ export function ContactUs() {
               <h3 className="text-lg font-semibold">Ace Monte</h3>
               <p className="text-gray-500 dark:text-gray-400">Dev</p>
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                Michael is our operations mastermind, ensuring the smooth functioning of our organization and driving
+                Ace is our operations mastermind, ensuring the smooth functioning of our organization and driving
                 efficiency.
               </p>
             </div>
