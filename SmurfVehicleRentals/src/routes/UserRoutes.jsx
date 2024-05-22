@@ -17,7 +17,7 @@ import TermsandConditions from '../components/component/TermsandConditions'
 import { Blogs2 } from '../components/component/Blogs2'
 import { Blogs3 } from '../components/component/Blogs3'
 import { NavigationBar } from '../components/component/navigation-bar'
-
+import AboutUs from '../pages/AboutUs'
 export default function UserRoutes() {
   return (
     <>
@@ -41,6 +41,7 @@ export default function UserRoutes() {
     <Route path='/TravelHacks' element={<Blogs2/>}/>
     <Route path='/Guide' element={<Blogs3/>}/>
     <Route path='/Sitemap' element = {<Sitemapp/>}/>
+    <Route path='/AboutUs' element = {<AboutUs/>}/>
     </Routes>
    
     </>

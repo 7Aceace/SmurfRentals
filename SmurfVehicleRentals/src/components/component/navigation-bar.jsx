@@ -48,6 +48,11 @@ export function NavigationBar({children}) {
           to='/ContactUs'>
           Contact
         </Link>
+        <Link
+           className="no-underline text-blue-800"
+          to='/AboutUs'>
+          About Us
+        </Link>
       </div>
       <div className="relative ml-auto flex items-center">
         <form className="flex items-center">

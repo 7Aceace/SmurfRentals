@@ -92,11 +92,7 @@ export function NewSitemap() {
               href="#">
               Instagram
             </Link>
-            <Link
-              className="text-xl text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-              href="#">
-              LinkedIn
-            </Link>
+           
           </div>
         </div>
       </div>
