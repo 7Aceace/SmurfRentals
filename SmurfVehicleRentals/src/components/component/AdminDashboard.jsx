@@ -30,7 +30,7 @@ export function AdminDashboard() {
       </header>
       <main className="flex flex-1 flex-col gap-4 p-4">
         <div className="flex items-center justify-between">
-          <h1 className="font-semibold text-lg text-[#0369a1]">Admin Dashboard - Product Management</h1>
+          <h1 className="font-semibold text-lg text-[#0369a1]">Admin Dashboard - Vehicle Rental Management</h1>
         </div>
         <div
           className="bg-[#f0f9ff] dark:bg-[#0b1521] p-6 rounded-lg flex items-center justify-center">
@@ -47,7 +47,7 @@ export function AdminDashboard() {
           <div>
             <h2 className="text-[#0369a1] font-semibold text-lg">Admin</h2>
             <p className="text-[#475569] dark:text-[#94a3b8]">
-              Welcome to the product management dashboard. You can add new products here.
+              Welcome to the vehicle management dashboard. You can add new vehicles here.
             </p>
           </div>
         </div>

@@ -11,7 +11,7 @@ import FooterN from '../components/FooterN';
 import Contact from '../pages/Contact'
 import  FAQv  from '../pages/FAQV'
 import  Blogs  from '../pages/BlogsPage'
-
+import Sitemapp from '../pages/Sitemap'
 import Bookings from '../pages/Bookings'
 import TermsandConditions from '../components/component/TermsandConditions'
 import { Blogs2 } from '../components/component/Blogs2'
@@ -40,6 +40,7 @@ export default function UserRoutes() {
     <Route path='/TouristSpot:Cambugahay' element={<Blogs/>}/>
     <Route path='/TravelHacks' element={<Blogs2/>}/>
     <Route path='/Guide' element={<Blogs3/>}/>
+    <Route path='/Sitemap' element = {<Sitemapp/>}/>
     </Routes>
    
     </>

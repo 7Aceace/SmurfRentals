@@ -3,9 +3,10 @@ import '../../index.css';
 import { db, storage } from '../../firebase/fire';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { collection, addDoc } from 'firebase/firestore';
-
+import { UserAuth } from '../../context/AuthContext';
 
 const ProductManagement = () => {
+  const {user} = UserAuth();  
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState('');
@@ -72,9 +73,10 @@ const ProductManagement = () => {
   }
  return (
 
-<div className="flex flex-col items-center justify-center h-screen bg-gray-100 dark:bg-gray-900">
+<div className="flex flex-col items-center justify-center h-screen bg-gray-100 dark:bg-gray-900 bg-white">
+<h1 className="font-bold text-center">Admin Dashboard of {user?.firstName}</h1>
   <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 w-full max-w-md">
-    <h1 className="text-2xl font-bold mb-4 dark:text-gray-200">Add New Product</h1>
+    <h1 className="text-2xl font-bold mb-4 dark:text-gray-200">Add Vehicle Rentals</h1>
     {successMsg&&<>
       <div className='success-msg'>{successMsg}</div></>
 

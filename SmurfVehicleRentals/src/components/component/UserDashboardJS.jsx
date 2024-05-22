@@ -171,20 +171,20 @@ export function UserDashboardJS() {
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="first-name">First Name</Label>
-                      <Input id="first-name" placeholder="John" />
+                      <Input id="First Name" placeholder="John" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="last-name">Last Name</Label>
-                      <Input id="last-name" placeholder="Doe" />
+                      <Input id="Last Name" placeholder="Doe" />
                     </div>
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
-                    <Input id="email" placeholder="john@example.com" type="email" />
+                    <Input id="email" placeholder="Email" type="email" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="password">Password</Label>
-                    <Input id="password" placeholder="********" type="password" />
+                    <Input id="password" placeholder="Password" type="password" />
                   </div>
                 </CardContent>
                 <CardFooter>
