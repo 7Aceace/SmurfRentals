@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 
 export function NewSitemap() {
   return (
-    (<section className="w-full py-12 md:py-24 lg:py-32 bg-white mb-64">
-      <div className="container px-4 md:px-6">
+    (
+      <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-200">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-white mb-64 border border-gray-500 border-opacity-50 shadow-md rounded ring-2 ring-blue-500 ring-opacity-75"> <div className="container px-4 md:px-6">
       <h1 className=" text-5xl font-bold mb-8">Sitemap</h1> 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="grid gap-2">
@@ -96,6 +97,7 @@ export function NewSitemap() {
           </div>
         </div>
       </div>
-    </section>)
+    </section>
+    </div>)
   );
 }
