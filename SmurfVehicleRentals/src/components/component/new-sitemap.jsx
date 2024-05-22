@@ -48,8 +48,8 @@ export function NewSitemap() {
             </Link>
             <Link
               className="text-xl text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-              href="#">
-              Support
+              to='/Bookings'>
+              Book Now
             </Link>
           </div>
           <div className="grid gap-2">
