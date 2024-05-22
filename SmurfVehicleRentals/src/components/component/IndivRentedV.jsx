@@ -215,9 +215,9 @@ const totalPrice = rentedVehicle.price * totalDays * rentedVehicle.qty;
                     <SelectValue placeholder="Select location" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="location1">Location 1</SelectItem>
-                    <SelectItem value="location2">Location 2</SelectItem>
-                    <SelectItem value="location3">Location 3</SelectItem>
+                    <SelectItem value="location1">San Juan, Siquijor</SelectItem>
+                    <SelectItem value="location2">Siquijor, Siquijor</SelectItem>
+                    <SelectItem value="location3">Lazi, Siquijor</SelectItem>
                   </SelectContent>
                 </Select>
                 <Label htmlFor="dropoff-location">Drop Off Location</Label>
